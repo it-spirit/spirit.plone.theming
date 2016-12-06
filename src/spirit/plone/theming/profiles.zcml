@@ -1,0 +1,48 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <!-- GenericSetup Profiles. -->
+  <!-- ====================== -->
+  <genericsetup:registerProfile
+      name="default"
+      title="spirit.plone.theming"
+      directory="profiles/default"
+      description="Installs the spirit.plone.theming add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="spirit.plone.theming: Uninstall"
+      directory="profiles/uninstall"
+      description="Removes the spirit.plone.theming add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+
+  <!-- GenericSetup Import Steps. -->
+  <!-- ========================== -->
+  <genericsetup:importStep
+      name="spirit.plone.theming-postInstall"
+      title="spirit.plone.theming: post_install import step"
+      description="Post install import step from spirit.plone.theming"
+      handler=".setuphandlers.post_install">
+  </genericsetup:importStep>
+
+
+  <!-- GenericSetup Upgrade Steps. -->
+  <!-- =========================== -->
+  <!--
+  <genericsetup:upgradeStep
+      title="Upgrade spirit.plone.theming"
+      description="Description."
+      source="1000"
+      destination="1001"
+      handler=".migration.migrate_to_1001"
+      sortkey="1"
+      profile="spirit.plone.theming:default"
+      />
+  -->
+
+</configure>

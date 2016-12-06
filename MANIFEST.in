@@ -1,0 +1,5 @@
+graft src/spirit
+graft docs
+include *.rst
+global-exclude *.pyc
+prune docs/build

@@ -1,0 +1,47 @@
+language: python
+python:
+  - 2.6
+  - 2.7
+sudo: false
+cache:
+  directories:
+    - eggs
+env:
+  - PLONE_VERSION=4.1
+  - PLONE_VERSION=4.2
+  - PLONE_VERSION=4.3
+  - PLONE_VERSION=5.0
+  - PLONE_VERSION=5.1
+matrix:
+  exclude:
+    - python: 2.7
+      env: PLONE_VERSION=4.1
+    - python: 2.6
+      env: PLONE_VERSION=4.2
+    - python: 2.6
+      env: PLONE_VERSION=4.3
+    - python: 2.6
+      env: PLONE_VERSION=5.0
+    - python: 2.6
+      env: PLONE_VERSION=5.1
+  fast_finish: true
+addons:
+  firefox: "39.0"
+install:
+  - sed -ie "s#travis-4.x.cfg#travis-$PLONE_VERSION.x.cfg#" travis.cfg
+  - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
+  - mkdir -p buildout-cache/eggs
+  - mkdir -p buildout-cache/downloads
+  - pip install zc.buildout
+  - buildout -c travis.cfg annotate
+  - buildout -c travis.cfg -N -q
+branches:
+  only:
+    - master
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - firefox -v
+script:
+  - bin/code-analysis
+  - bin/test

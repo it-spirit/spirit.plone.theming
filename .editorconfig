@@ -1,0 +1,19 @@
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# 2 space indentation
+[*.js]
+indent_size = 2
+indent_style = space
+
+# 2 space indentation
+[{*.html,*.dtml,*.pt,*.xml,*.zcml}]
+indent_size = 2
+indent_style = space
+
+# 4 space indentation
+[*.py]
+indent_size = 4
+indent_style = space

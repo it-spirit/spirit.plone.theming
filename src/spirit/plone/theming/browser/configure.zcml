@@ -1,0 +1,44 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="spirit.plone.theming">
+
+  <!-- Include package dependencies. -->
+  <!-- ============================= -->
+  <include package="plone.app.controlpanel" />
+
+
+  <!-- Browser Resources. -->
+  <!-- ================== -->
+  <browser:resourceDirectory
+      name="spirit.plone.theming"
+      directory="static"
+      layer="..interfaces.ISpiritPloneThemingLayer"
+      />
+
+
+  <!-- Diazo Snippet Viewlet. -->
+  <!-- ====================== -->
+  <browser:viewlet
+      class=".viewlets.DiazoSnippetViewlet"
+      for="*"
+      layer="..interfaces.ISpiritPloneThemingLayer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      name="spirit.plone.theming.diazo_snippets"
+      permission="zope2.View"
+      template="templates/diazo_snippets.pt"
+      />
+
+
+  <!-- Controlpanel View. -->
+  <!-- ================== -->
+  <browser:page
+      class=".controlpanel.PloneThemeSettingsControlPanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      layer="..interfaces.ISpiritPloneThemingLayer"
+      name="plone-theming-settings"
+      permission="plone.app.controlpanel.Themes"
+      />
+
+</configure>

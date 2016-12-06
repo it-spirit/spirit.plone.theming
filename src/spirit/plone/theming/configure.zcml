@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="spirit.plone.theming">
+
+  <!-- Register i18n support. -->
+  <!-- ====================== -->
+  <i18n:registerTranslations directory="locales" />
+
+
+  <!-- Include package dependencies. -->
+  <!-- ============================= -->
+  <includeDependencies package="." />
+  <include package=".browser" />
+  <include file="profiles.zcml" />
+  <include file="vocabularies.zcml" />
+
+</configure>

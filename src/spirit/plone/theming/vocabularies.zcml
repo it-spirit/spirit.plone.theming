@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="spirit.plone.theming"
+    >
+
+  <utility
+      name="spirit.plone.theming.AvailableHeaderOptions"
+      factory=".vocabularies.AvailableHeaderOptionsVocabulary"
+      />
+
+  <utility
+      name="spirit.plone.theming.AvailableFooterOptions"
+      factory=".vocabularies.AvailableFooterOptionsVocabulary"
+      />
+
+  <utility
+      name="spirit.plone.theming.AvailableColorOptions"
+      factory=".vocabularies.AvailableColorOptionsVocabulary"
+      />
+
+  <utility
+      name="spirit.plone.theming.AvailablePatternOptions"
+      factory=".vocabularies.AvailablePatternOptionsVocabulary"
+      />
+
+  <utility
+      name="spirit.plone.theming.AvailableLayoutOptions"
+      factory=".vocabularies.AvailableLayoutOptionsVocabulary"
+      />
+
+</configure>

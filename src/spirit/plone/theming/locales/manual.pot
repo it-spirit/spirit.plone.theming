@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: spirit.plone.theming\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: spirit.plone.theming\n"
+
+
+#: Title for the 'default' profile in profiles.zcml
+msgid "spirit.plone.theming"
+msgstr ""
+
+#: Description for the 'default' profile in profiles.zcml
+msgid "Installs the spirit.plone.theming add-on."
+msgstr ""
+
+#: Title for the 'uninstall' profile in profiles.zcml
+msgid "spirit.plone.theming: Uninstall"
+msgstr ""
+
+#: Description for the 'uninstall' profile in profiles.zcml
+msgid "Removes the spirit.plone.theming add-on."
+msgstr ""

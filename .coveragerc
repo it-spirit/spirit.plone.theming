@@ -1,0 +1,6 @@
+[report]
+include =
+    src/spirit/*
+omit =
+    */test*
+    */upgrades/*

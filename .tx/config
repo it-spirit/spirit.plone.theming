@@ -1,0 +1,7 @@
+[plone.spiritplonetheming]
+file_filter = src/spirit/plone/theming/locales/<lang>/LC_MESSAGES/spirit.plone.theming.po
+source_file = src/spirit/plone/theming/locales/spirit.plone.theming.pot
+source_lang = en
+
+[main]
+host = https://www.transifex.com

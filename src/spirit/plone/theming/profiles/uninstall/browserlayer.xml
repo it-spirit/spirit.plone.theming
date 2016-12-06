@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      interface="spirit.plone.theming.interfaces.ISpiritPloneThemingLayer"
+      name="spirit.plone.theming"
+      remove="True"
+      />
+</layers>

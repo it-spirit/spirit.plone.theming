@@ -1,0 +1,17 @@
+.cache
+*.egg-info
+*.mo
+*.pyc
+*~
+.installed.cfg
+.mr.developer.cfg
+bin/
+checkouts/
+coverage/
+develop-eggs/
+dist/
+docs/build/
+downloads/
+eggs/
+parts/
+var/

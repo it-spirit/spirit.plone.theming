@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="spirit.plone.theming"
+      tal:omit-tag="">
+  <div id="spirit_plone_theming_diazo_snippets" style="display: none;"
+      tal:attributes="style string:display: ${view/debug_style}">
+    <h1 i18n:translate="">Diazo Snippets</h1>
+
+    <section id="PLONE_THEMING_DEBUG" data-plonetheming-value=""
+        tal:define="item view/debug | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>Debug Mode Enabled</p>
+    </section>
+
+    <section id="PLONE_THEMING_PLONE_VERSION" data-plonetheming-value=""
+        tal:define="item view/plone_version | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="id string:PLONE_THEMING_PLONE_VERSION_${item};
+                        data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_COLOPHON_TEXT"
+        tal:define="item view/colophon_text | nothing"
+        tal:condition="item"
+        tal:content="structure item">
+    </section>
+
+    <section id="PLONE_THEMING_COLOR_OPTION" data-plonetheming-value=""
+        tal:define="item view/color_option | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_EMAIL" data-plonetheming-value=""
+        tal:define="item view/email | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_FOOTER_OPTION" data-plonetheming-value=""
+        tal:define="item view/footer_option | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_FOOTER_TEXT"
+        tal:define="item view/footer_text | nothing"
+        tal:condition="item"
+        tal:content="structure item">
+    </section>
+
+    <section id="PLONE_THEMING_HEADER_OPTION" data-plonetheming-value=""
+        tal:define="item view/header_option | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_HIDE_SEARCHBOX" data-plonetheming-value=""
+        tal:define="item view/hide_searchbox | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>Hide Search Box</p>
+    </section>
+
+    <section id="PLONE_THEMING_LAYOUT_OPTION" data-plonetheming-value=""
+        tal:define="item view/layout_option | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_PATTERN_OPTION" data-plonetheming-value=""
+        tal:define="item view/pattern_option | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_PHONE_NUMBER" data-plonetheming-value=""
+        tal:define="item view/phone_number | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_PHONE_NUMBER_RAW" data-plonetheming-value=""
+        tal:define="item view/phone_number_raw | nothing"
+        tal:condition="item"
+        tal:content="item"
+        tal:attributes="data-plonetheming-value item">
+    </section>
+
+    <section id="PLONE_THEMING_SLIDESHOW_FULLSCREEN" data-plonetheming-value=""
+        tal:define="item view/slideshow_fullscreen | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>Fullscreen Slideshow Enabled</p>
+    </section>
+
+    <section id="PLONE_THEMING_SLOGAN"
+        tal:define="item view/slogan | nothing"
+        tal:condition="item"
+        tal:content="structure item">
+    </section>
+
+  </div>
+</html>

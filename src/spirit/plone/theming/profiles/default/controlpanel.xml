@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="spirit.plone.theming"
+        purge="False">
+
+  <configlet action_id="plone_theming_settings"
+             appId="spirit.plone.theming"
+             category="Products"
+             condition_expr=""
+             icon_expr="string:${portal_url}/++resource++plone.app.theming.gif"
+             title="Plone Theming Settings"
+             url_expr="string:${portal_url}/@@plone-theming-settings"
+             visible="True"
+             i18n:attributes="title">
+    <permission>Plone Site Setup: Themes</permission>
+  </configlet>
+
+</object>

@@ -1,0 +1,195 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# Translators:
+# Thomas Massmann <thomas.massmann@it-spir.it>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone Components\n"
+"POT-Creation-Date: 2016-04-22 16:07+0000\n"
+"PO-Revision-Date: 2016-04-22 16:10+0000\n"
+"Last-Translator: Thomas Massmann <thomas.massmann@it-spir.it>\n"
+"Language-Team: German (http://www.transifex.com/it-spirit/plone/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Domain: spirit.plone.theming\n"
+"Language: de\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Preferred-Encodings: utf-8 latin1\n"
+
+#: spirit/plone/theming/browser/templates/diazo_snippets.pt:81
+msgid "<p>Fullscreen Slideshow Enabled</p>"
+msgstr "<p>Slideshow Vollbild-Modus aktiviert</p>"
+
+#: spirit/plone/theming/interfaces.py:89
+msgid ""
+"Add a phone number for your primary website contact. The phone number will "
+"be available as content with the CSS id <em>PLONE_THEMING_PHONE_NUMBER</em> and"
+" <em>PLONE_THEMING_PHONE_NUMBER_RAW</em> (all non-number characters removed)."
+msgstr "Fügen Sie eine Telefonnummer für Ihre Kontaktdaten auf der Webseite hinzu. Die Telefonnummer wird in Elementen mit der CSS-ID <em>PLONE_THEMING_PHONE_NUMBER</em> und <em>PLONE_THEMING_PHONE_NUMBER_RAW</em> (alle nicht-numerischen Zeichen entfernt) zur Verfügung stehen."
+
+#: spirit/plone/theming/interfaces.py:79
+msgid ""
+"Add a slogan for your website (HTML is supported). The slogan will be "
+"available as content with the CSS id <em>PLONE_THEMING_SLOGAN</em>."
+msgstr "Fügen Sie einen Werbespruch / ein Motto für Ihre Webseite hinzu (HTML Elemente sind erlaubt). Der Werbespruch wird in einem Element mit der CSS-ID <em>PLONE_THEMING_SLOGAN</em> zur Verfügung stehen."
+
+#: spirit/plone/theming/interfaces.py:101
+msgid ""
+"Add a valid email address. The email address will be available as content "
+"with the CSS id <em>PLONE_THEMING_EMAIL</em>."
+msgstr "Fügen Sie eine gültige E-Mail Adresse für Ihre Kontaktdaten auf der Webseite hinzu. Die E-Mail Adresse wird in einem Element mit der CSS-ID <em>PLONE_THEMING_EMAIL</em> zur Verfügung stehen."
+
+#: spirit/plone/theming/interfaces.py:140
+msgid ""
+"Add your custom colophon text (HTML is supported). The colophon text will be"
+" available as content with the CSS id <em>PLONE_THEMING_COLOPHON_TEXT</em>. You"
+" can also add the following variables: <em>{portal_url}</em>, "
+"<em>{year}</em>. Example: <code>&lt;p&gt;Powered by Plone, Python &amp; "
+"&lt;a href=\"{portal_url}\"&gt;Your Company Name&lt;/a&gt;&lt;/p&gt;</code>."
+msgstr "Fügen Sie Ihren eigenen Text für die erweiterte Fußzeile hinzu (HTML Elemente sind erlaubt). Der Text wird in einem Element mit der CSS-ID <em> PLONE_THEMING_COLOPHON_TEXT </em> zur Verfügung stehen. Die Folgenden Variablen können für dynamische Inhalte verwendet werden: <em>{portal_url}</em>, <em>{year}</em>. Beispiel: <code>&lt;p&gt;Powered by Plone, Python &amp; &lt;a href=\"{portal_url}\"&gt;Your Company Name&lt;/a&gt;&lt;/p&gt;</code>."
+
+#: spirit/plone/theming/interfaces.py:125
+msgid ""
+"Add your custom footer text (HTML is supported). The footer text will be "
+"available as content with the CSS id <em>PLONE_THEMING_FOOTER_TEXT</em>. You "
+"can also add the following variables: <em>{portal_url}</em>, "
+"<em>{year}</em>. Example: <code>&lt;p&gt;&amp;copy; Copyright 2009-{year} "
+"Your Company Name&lt;/p&gt;</code>."
+msgstr "Fügen Sie Ihren eigenen Text für die Fußzeile hinzu (HTML Elemente sind erlaubt). Der Text wird in einem Element mit der CSS-ID <em>PLONE_THEMING_FOOTER_TEXT</em> zur Verfügung stehen. Die Folgenden Variablen können für dynamische Inhalte verwendet werden: <em>{portal_url}</em>, <em>{year}</em>. Beispiel: <code>&lt;p&gt;&amp;copy; Copyright 2009-{year} Your Company Name&lt;/p&gt;</code>."
+
+#: spirit/plone/theming/interfaces.py:172
+msgid "Available Color Options"
+msgstr "Verfügbare Farb-Optionen"
+
+#: spirit/plone/theming/interfaces.py:165
+msgid "Available Footer Options"
+msgstr "Verfügbare Fußzeilen-Optionen"
+
+#: spirit/plone/theming/interfaces.py:158
+msgid "Available Header Options"
+msgstr "Verfügbare Kopfzeilen-Optionen"
+
+#: spirit/plone/theming/interfaces.py:179
+msgid "Available Layout Options"
+msgstr "Verfügbare Gestaltungs-Optionen"
+
+#: spirit/plone/theming/interfaces.py:64
+msgid "Color Option"
+msgstr "Farb-Optionen"
+
+#: spirit/plone/theming/interfaces.py:151
+msgid "Custom Colophon Text"
+msgstr "Angepasster Text für die erweiterte Fußzeile"
+
+#: spirit/plone/theming/interfaces.py:136
+msgid "Custom Footer Text"
+msgstr "Angepasster Text für die Fußzeile"
+
+#: spirit/plone/theming/browser/templates/diazo_snippets.pt:10
+msgid "Diazo Snippets"
+msgstr "Diazo HTML Schnipsel"
+
+#: spirit/plone/theming/interfaces.py:107
+msgid "E-Mail Address"
+msgstr "E-Mail Addresse"
+
+#: spirit/plone/theming/interfaces.py:35
+msgid "Enable Debug Mode"
+msgstr "Debug-Modus aktivieren"
+
+#: spirit/plone/theming/interfaces.py:54
+msgid "Footer Option"
+msgstr "Fußzeilen-Option"
+
+#: spirit/plone/theming/interfaces.py:44
+msgid "Header Option"
+msgstr "Kopfzeilen-Option"
+
+#: spirit/plone/theming/interfaces.py:111
+msgid ""
+"If enabled, a slideshow (if available) will be rendered in fullscreen mode. "
+"Depending on the theme, this might be above the main menu or as header "
+"background. If disabled, the slideshow is visible within the content "
+"area.The slideshow fullscreen mode will be available as content with the CSS"
+" id <em>PLONE_THEMING_SLIDESHOW_FULLSCREEN</em> if enabled."
+msgstr "Wenn diese Option aktiviert ist werden Slideshows (sofern vorhanden) in einer Vollbild-Darstellung angezeigt. Abhängig von dem Design kann dies über der Hauptnavigation oder aber als Hintergrund für den Kopfbereich erfolgen. Ist diese Option deaktiviert wird die Slideshow standardmäßig im Inhaltsbereich dargestellt. Die Auswahl der Option wird, sofern sie aktiviert ist, in einem Element mit der CSS-ID <em>PLONE_THEMING_SLIDESHOW_FULLSCREEN</em> zur Verfügung stehen. Ist die Option deaktiviert, dann steht auch das Element nicht zur Verfügung."
+
+#: spirit/plone/theming/interfaces.py:29
+msgid ""
+"If enabled, the content of the diazo snippets will be visible to the user. "
+"If disabled, the content is hidden with CSS."
+msgstr "Wenn diese Option aktiviert ist werden die Diazo-Schnipsel für Benutzer der Webseite sichtbar sein. Ist diese Option deaktiviert, wird der Inhalt mit Hilfe von CSS versteckt."
+
+#: Description for the 'default' profile in profiles.zcml
+msgid "Installs the spirit.plone.theming add-on."
+msgstr "Die Erweiterung spirit.plone.theming installieren."
+
+#: spirit/plone/theming/interfaces.py:74
+msgid "Layout Option"
+msgstr "Gestaltungs-Option"
+
+#: spirit/plone/theming/interfaces.py:161
+msgid "Option"
+msgstr "Option"
+
+#: spirit/plone/theming/interfaces.py:97
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: spirit/plone/theming/vocabularies.py:41
+msgid "Please upgrade or reinstall spirit.plone.theming"
+msgstr "Bitte aktualisieren Sie spirit.plone.theming."
+
+#: Title for the 'default' profile in profiles.zcml
+msgid "spirit.plone.theming"
+msgstr "spirit.plone.theming"
+
+#: spirit/plone/theming/browser/controlpanel.py:44
+#: spirit/plone/theming/profiles/default/controlpanel.xml
+msgid "Plone Theming Settings"
+msgstr "Plone Design Einstellungen"
+
+#: Title for the 'uninstall' profile in profiles.zcml
+msgid "Plone Theming: Uninstall"
+msgstr "Plone Design: Uninstall"
+
+#: spirit/plone/theming/browser/controlpanel.py:33
+msgid "Registry has been updated. Please reload this page."
+msgstr "Die Konfiguration wurde aktualisiert. Bitte laden Sie die Seite neu."
+
+#: Description for the 'uninstall' profile in profiles.zcml
+msgid "Removes the spirit.plone.theming add-on."
+msgstr "Die Erweiterung spirit.plone.theming entfernen."
+
+#: spirit/plone/theming/interfaces.py:59
+msgid "Select the color variant which should be used for the current theme."
+msgstr "Wählen Sie die Farb-Variante für das aktuelle Design."
+
+#: spirit/plone/theming/interfaces.py:49
+msgid "Select the footer variant which should be used for the current theme."
+msgstr "Wählen Sie die Fußzeilen-Variante für das aktuelle Design."
+
+#: spirit/plone/theming/interfaces.py:39
+msgid "Select the header variant which should be used for the current theme."
+msgstr "Wählen Sie die Kopfzeilen-Variante für das aktuelle Design."
+
+#: spirit/plone/theming/interfaces.py:69
+msgid "Select the layout variant which should be used for the current theme."
+msgstr "Wählen Sie die Design-Variante für das aktuelle Design."
+
+#: spirit/plone/theming/browser/controlpanel.py:45
+msgid ""
+"Settings that can be used by Diazo themes. Please note that not every theme "
+"supports all possible options."
+msgstr "Diese Einstellungen können von Diazo-Designs für eine dynamische Konfiguration verwendet werden. Bitte beachten Sie, dass nicht jedes verfügbare Design alle möglichen Optionen unterstützt."
+
+#: spirit/plone/theming/interfaces.py:121
+msgid "Slideshow Fullscreen Mode"
+msgstr "Slideshow Vollbild-Modus"
+
+#: spirit/plone/theming/interfaces.py:85
+msgid "Slogan"
+msgstr "Werbespruch/Motto"
