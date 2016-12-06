@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: spirit.plone.theming\n"
-"POT-Creation-Date: 2016-04-22 16:07+0000\n"
+"POT-Creation-Date: 2016-12-06 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,55 +14,67 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: spirit.plone.theming\n"
 
-#: spirit/plone/theming/browser/templates/diazo_snippets.pt:81
+#: spirit/plone/theming/browser/templates/diazo_snippets.pt:12
+msgid "<p>Debug Mode Enabled</p>"
+msgstr ""
+
+#: spirit/plone/theming/browser/templates/diazo_snippets.pt:104
 msgid "<p>Fullscreen Slideshow Enabled</p>"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:89
+#: spirit/plone/theming/browser/templates/diazo_snippets.pt:68
+msgid "<p>Hide Search Box</p>"
+msgstr ""
+
+#: spirit/plone/theming/interfaces.py:99
 msgid "Add a phone number for your primary website contact. The phone number will be available as content with the CSS id <em>PLONE_THEMING_PHONE_NUMBER</em> and <em>PLONE_THEMING_PHONE_NUMBER_RAW</em> (all non-number characters removed)."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:79
+#: spirit/plone/theming/interfaces.py:89
 msgid "Add a slogan for your website (HTML is supported). The slogan will be available as content with the CSS id <em>PLONE_THEMING_SLOGAN</em>."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:101
+#: spirit/plone/theming/interfaces.py:111
 msgid "Add a valid email address. The email address will be available as content with the CSS id <em>PLONE_THEMING_EMAIL</em>."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:140
+#: spirit/plone/theming/interfaces.py:162
 msgid "Add your custom colophon text (HTML is supported). The colophon text will be available as content with the CSS id <em>PLONE_THEMING_COLOPHON_TEXT</em>. You can also add the following variables: <em>{portal_url}</em>, <em>{year}</em>. Example: <code>&lt;p&gt;Powered by Plone, Python &amp; &lt;a href=\"{portal_url}\"&gt;Your Company Name&lt;/a&gt;&lt;/p&gt;</code>."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:125
+#: spirit/plone/theming/interfaces.py:147
 msgid "Add your custom footer text (HTML is supported). The footer text will be available as content with the CSS id <em>PLONE_THEMING_FOOTER_TEXT</em>. You can also add the following variables: <em>{portal_url}</em>, <em>{year}</em>. Example: <code>&lt;p&gt;&amp;copy; Copyright 2009-{year} Your Company Name&lt;/p&gt;</code>."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:172
+#: spirit/plone/theming/interfaces.py:195
 msgid "Available Color Options"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:165
+#: spirit/plone/theming/interfaces.py:188
 msgid "Available Footer Options"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:158
+#: spirit/plone/theming/interfaces.py:181
 msgid "Available Header Options"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:179
+#: spirit/plone/theming/interfaces.py:209
 msgid "Available Layout Options"
+msgstr ""
+
+#: spirit/plone/theming/interfaces.py:202
+msgid "Available Pattern Options"
 msgstr ""
 
 #: spirit/plone/theming/interfaces.py:64
 msgid "Color Option"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:151
+#: spirit/plone/theming/interfaces.py:174
 msgid "Custom Colophon Text"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:136
+#: spirit/plone/theming/interfaces.py:158
 msgid "Custom Footer Text"
 msgstr ""
 
@@ -70,7 +82,7 @@ msgstr ""
 msgid "Diazo Snippets"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:107
+#: spirit/plone/theming/interfaces.py:117
 msgid "E-Mail Address"
 msgstr ""
 
@@ -86,7 +98,11 @@ msgstr ""
 msgid "Header Option"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:111
+#: spirit/plone/theming/interfaces.py:129
+msgid "Hide Search Box"
+msgstr ""
+
+#: spirit/plone/theming/interfaces.py:133
 msgid "If enabled, a slideshow (if available) will be rendered in fullscreen mode. Depending on the theme, this might be above the main menu or as header background. If disabled, the slideshow is visible within the content area.The slideshow fullscreen mode will be available as content with the CSS id <em>PLONE_THEMING_SLIDESHOW_FULLSCREEN</em> if enabled."
 msgstr ""
 
@@ -94,19 +110,27 @@ msgstr ""
 msgid "If enabled, the content of the diazo snippets will be visible to the user. If disabled, the content is hidden with CSS."
 msgstr ""
 
+#: spirit/plone/theming/interfaces.py:121
+msgid "If enabled, the search box (available in the header part) will be removed in the theme.The searchbox option will be available as content with the CSS id <em>PLONE_THEMING_HIDE_SEARCHBOX</em> if enabled."
+msgstr ""
+
 #: Description for the 'default' profile in profiles.zcml
 msgid "Installs the spirit.plone.theming add-on."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:74
+#: spirit/plone/theming/interfaces.py:84
 msgid "Layout Option"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:161
+#: spirit/plone/theming/interfaces.py:184
 msgid "Option"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:97
+#: spirit/plone/theming/interfaces.py:74
+msgid "Pattern Option"
+msgstr ""
+
+#: spirit/plone/theming/interfaces.py:107
 msgid "Phone number"
 msgstr ""
 
@@ -114,17 +138,9 @@ msgstr ""
 msgid "Please upgrade or reinstall spirit.plone.theming"
 msgstr ""
 
-#: Title for the 'default' profile in profiles.zcml
-msgid "spirit.plone.theming"
-msgstr ""
-
 #: spirit/plone/theming/browser/controlpanel.py:44
 #: spirit/plone/theming/profiles/default/controlpanel.xml
 msgid "Plone Theming Settings"
-msgstr ""
-
-#: Title for the 'uninstall' profile in profiles.zcml
-msgid "spirit.plone.theming: Uninstall"
 msgstr ""
 
 #: spirit/plone/theming/browser/controlpanel.py:33
@@ -133,6 +149,10 @@ msgstr ""
 
 #: Description for the 'uninstall' profile in profiles.zcml
 msgid "Removes the spirit.plone.theming add-on."
+msgstr ""
+
+#: spirit/plone/theming/interfaces.py:69
+msgid "Select the background pattern which should be used for the current theme."
 msgstr ""
 
 #: spirit/plone/theming/interfaces.py:59
@@ -147,7 +167,7 @@ msgstr ""
 msgid "Select the header variant which should be used for the current theme."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:69
+#: spirit/plone/theming/interfaces.py:79
 msgid "Select the layout variant which should be used for the current theme."
 msgstr ""
 
@@ -155,10 +175,18 @@ msgstr ""
 msgid "Settings that can be used by Diazo themes. Please note that not every theme supports all possible options."
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:121
+#: spirit/plone/theming/interfaces.py:143
 msgid "Slideshow Fullscreen Mode"
 msgstr ""
 
-#: spirit/plone/theming/interfaces.py:85
+#: spirit/plone/theming/interfaces.py:95
 msgid "Slogan"
+msgstr ""
+
+#: Title for the 'default' profile in profiles.zcml
+msgid "spirit.plone.theming"
+msgstr ""
+
+#: Title for the 'uninstall' profile in profiles.zcml
+msgid "spirit.plone.theming: Uninstall"
 msgstr ""
