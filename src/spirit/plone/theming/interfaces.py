@@ -35,6 +35,12 @@ class IPloneThemeSettings(form.Schema):
         title=_(u'Enable Debug Mode'),
     )
 
+    site_favicon = schema.ASCII(
+        description=_(u'This shows a custom favicon on your site.'),
+        required=False,
+        title=_(u'Site Favicon'),
+    )
+
     header_option = schema.Choice(
         description=_(
             u'Select the header variant which should be used for the current '

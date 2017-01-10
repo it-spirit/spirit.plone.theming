@@ -3,6 +3,7 @@
 
 # zope imports
 from plone.app.registry.browser import controlpanel
+from plone.formwidget.namedfile.widget import NamedImageFieldWidget
 from plone.registry.interfaces import IRegistry
 from z3c.form import field
 from zope.component import getUtility
@@ -49,6 +50,7 @@ class PloneThemeSettingsEditForm(SelfHealingRegistryEditForm):
 
     def updateFields(self):
         super(PloneThemeSettingsEditForm, self).updateFields()
+        self.fields['site_favicon'].widgetFactory = NamedImageFieldWidget
 
     def updateWidgets(self):
         super(PloneThemeSettingsEditForm, self).updateWidgets()
