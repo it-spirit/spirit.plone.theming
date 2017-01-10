@@ -12,6 +12,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import view
 
 # local imports
+from spirit.plone.theming import utils
 from spirit.plone.theming.interfaces import IPloneThemeSettings
 
 
@@ -123,3 +124,8 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def slogan(self):
         return self._get_registry_record(name='slogan')
+
+    @property
+    @view.memoize_contextless
+    def favicon(self):
+        return utils.get_site_favicon()

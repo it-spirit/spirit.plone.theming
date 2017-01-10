@@ -25,6 +25,13 @@
                         data-plonetheming-value item">
     </section>
 
+    <section id="PLONE_THEMING_FAVICON"
+        tal:define="item view/favicon | nothing"
+        tal:condition="item">
+      <link rel="shortcut icon" href="favicon.ico"
+          tal:attributes="href item" />
+    </section>
+
     <section id="PLONE_THEMING_COLOPHON_TEXT"
         tal:define="item view/colophon_text | nothing"
         tal:condition="item"
