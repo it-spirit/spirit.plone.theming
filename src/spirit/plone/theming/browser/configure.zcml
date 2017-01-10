@@ -41,4 +41,12 @@
       permission="plone.app.controlpanel.Themes"
       />
 
+
+  <browser:page
+      for="*"
+      name="site-favicon"
+      class=".favicon.Favicon"
+      permission="zope.Public"
+      />
+
 </configure>
