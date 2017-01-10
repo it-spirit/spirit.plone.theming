@@ -24,6 +24,7 @@ install_requires = [
     'plone.api',
     'plone.app.registry',
     'plone.directives.form',
+    'plone.formwidget.namedfile',
     'tzlocal',
 ]
 
