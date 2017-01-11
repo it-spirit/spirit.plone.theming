@@ -14,6 +14,10 @@ You should see an item called **spirit.plone.theming**.
 Plone Theming Settings
 ----------------------
 
+Below is a list of currently supported options.
+Note that not every theme by default supports all of those options.
+
+
 Enable Debug Mode
 """""""""""""""""
 

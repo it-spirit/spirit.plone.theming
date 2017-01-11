@@ -11,6 +11,8 @@ Theming extensions for Plone Websites
    :maxdepth: 2
 
    configuration
+   diazo
+   theming
 
 
 .. only:: html
