@@ -62,3 +62,27 @@ Show how to change the settings
     ...  settings-phone_number.png
     ...  id=formfield-form-widgets-phone_number
 
+    Page should contain element  id=formfield-form-widgets-email
+    Capture and crop page screenshot
+    ...  settings-email.png
+    ...  id=formfield-form-widgets-email
+
+    Page should contain element  id=formfield-form-widgets-hide_searchbox
+    Capture and crop page screenshot
+    ...  settings-hide_searchbox.png
+    ...  id=formfield-form-widgets-hide_searchbox
+
+    Page should contain element  id=formfield-form-widgets-slideshow_fullscreen
+    Capture and crop page screenshot
+    ...  settings-slideshow_fullscreen.png
+    ...  id=formfield-form-widgets-slideshow_fullscreen
+
+    Page should contain element  id=formfield-form-widgets-footer_text
+    Capture and crop page screenshot
+    ...  settings-footer_text.png
+    ...  id=formfield-form-widgets-footer_text
+
+    Page should contain element  id=formfield-form-widgets-colophon_text
+    Capture and crop page screenshot
+    ...  settings-colophon_text.png
+    ...  id=formfield-form-widgets-colophon_text

@@ -106,3 +106,72 @@ Diazo example:
 
     <replace css:content="#PLONE_THEMING_PHONE_NUMBER" css:theme=".site-social-links .phone" />
     <drop css:if-not-content="#PLONE_THEMING_PHONE_NUMBER" css:theme=".site-social-links .phone" />
+
+
+E-Mail Address
+""""""""""""""
+
+.. image:: ../_images/settings-email.png
+
+Add a valid email address.
+The email address will be available as content with the CSS id ``PLONE_THEMING_EMAIL``.
+
+
+Hide Search Box
+"""""""""""""""
+
+.. image:: ../_images/settings-hide_searchbox.png
+
+If enabled, the search box (available in the header part) will be removed in the theme.
+The searchbox option will be available as content with the CSS id ``PLONE_THEMING_HIDE_SEARCHBOX`` if enabled.
+
+
+Slideshow Fullscreen Mode
+"""""""""""""""""""""""""
+
+.. image:: ../_images/settings-slideshow_fullscreen.png
+
+If enabled, a slideshow (if available) will be rendered in fullscreen mode.
+Depending on the theme, this might be above the main menu or as header background.
+If disabled, the slideshow is visible within the content area.
+The slideshow fullscreen mode will be available as content with the CSS id ``PLONE_THEMING_SLIDESHOW_FULLSCREEN`` if enabled.
+
+
+Custom Footer Text
+""""""""""""""""""
+
+.. image:: ../_images/settings-footer_text.png
+
+
+Add your custom footer text (HTML is supported).
+The footer text will be available as content with the CSS id ``PLONE_THEMING_FOOTER_TEXT``.
+You can also add the following variables:
+
+- ``{portal_url}``
+- ``{year}``
+
+Example:
+
+.. code-block:: html
+
+     <p>&copy; Copyright 2009-{year} Your Company Name.</p>
+
+
+Custom Colophon Text
+""""""""""""""""""""
+
+.. image:: ../_images/settings-colophon_text.png
+
+
+Add your custom colophon text (HTML is supported).
+The colophon text will be available as content with the CSS id ``PLONE_THEMING_COLOPHON_TEXT``.
+You can also add the following variables:
+
+- ``{portal_url}``
+- ``{year}``
+
+Example:
+
+.. code-block:: html
+
+     <p>Powered by Plone, Python &amp; <a href="{portal_url}">Your Company Name</a></p>
