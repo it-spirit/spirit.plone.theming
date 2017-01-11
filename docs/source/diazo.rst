@@ -2,7 +2,7 @@ Diazo Snippets
 ==============
 
 Base snippets
-"""""""""""""
+-------------
 
 
 Additional available snippets
