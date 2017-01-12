@@ -55,6 +55,14 @@ A theme could add the records on installation time using the ``registry.xml`` Ge
           <element>wide</element>
         </value>
       </record>
+      <record field="available_pattern_options"
+          name="spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_pattern_options"
+          interface="spirit.plone.theming.interfaces.IPloneThemingVocabularies">
+        <value>
+          <element>diagonal-noise</element>
+          <element>fabric-plaid</element>
+        </value>
+      </record>
     </registry>
 
 When the theme gets uninstalled, the entries should be removed.
@@ -80,6 +88,11 @@ To do this, add a ``registry.xml`` file to your uninstall profile with the follo
       </record>
       <record field="available_layout_options"
           name="spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_layout_options"
+          interface="spirit.plone.theming.interfaces.IPloneThemingVocabularies">
+        <value />
+      </record>
+      <record field="available_pattern_options"
+          name="spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_pattern_options"
           interface="spirit.plone.theming.interfaces.IPloneThemingVocabularies">
         <value />
       </record>
