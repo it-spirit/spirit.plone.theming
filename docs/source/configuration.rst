@@ -8,7 +8,9 @@ You can install the Add-On like any other Plone Add-On: click on your username i
 Next, click the **Add-Ons** item in the *Plone Configuration* section.
 You should see an item called **spirit.plone.theming**.
 
-Once installed, you should see the add-on within the list of activated add-ons, as the next screenshot shows:
+.. image:: ../_images/setup_select_add_on_installable.png
+
+You can remove **spirit.plone.theming** again from your Plone site by clicking the uninstall button next to the add-on:
 
 .. image:: ../_images/setup_select_add_on.png
 
