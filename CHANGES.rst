@@ -5,7 +5,8 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add ``site_favicon`` option to upload a custom favicon.
+- Update documentation.
 
 
 0.1 (2016-12-20)
