@@ -15,6 +15,12 @@ from spirit.plone.theming.interfaces import (
 )
 
 
+# Red pixel with filename pixel.png
+SITE_FAVICON_B64 = 'filenameb64:cGl4ZWwucG5n;datab64:iVBORw0KGgoAAAANSUhEUgAA'\
+                   'AAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAA'\
+                   'ElFTkSuQmCC'
+
+
 class TestDiazoSnippetsViewlet(ViewletsTestCase):
     """Validate the diazo snippets viewlet."""
 
@@ -103,6 +109,25 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             self.assertIn(snippet_id, rendered)
         except AttributeError:
             self.assertTrue(snippet_id in rendered)
+
+    def test_diazo_snippet_favicon(self):
+        """Validate the 'favicon' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        url = '{0}/favicon.ico'.format(self.portal.absolute_url())
+        self.assertEqual(dsv.favicon, url)
+
+    def test_diazo_snippet_favicon_set(self):
+        """Validate the 'favicon' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        ploneapi.portal.set_registry_record(
+            name='site_favicon',
+            value=SITE_FAVICON_B64,
+            interface=IPloneThemeSettings,
+        )
+        url = '{0}/@@site-favicon/pixel.png'.format(self.portal.absolute_url())
+        self.assertEqual(dsv.favicon, url)
 
     def test_diazo_snippet_header_option(self):
         """Validate the 'header_option' attribute."""
