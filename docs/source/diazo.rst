@@ -293,9 +293,7 @@ Plone Version Number
 """"""""""""""""""""
 
 It will show the currently used Plone major version number.
-It will be available as content with the CSS id ``PLONE_THEMING_PLONE_VERSION_${plone_version}``, e.g. ``PLONE_THEMING_PLONE_VERSION_4`` for Plone 4.
-
-Diazo example:
+It will be available as content with the CSS id ``PLONE_THEMING_PLONE_VERSION_${plone_version}``, e.g. ``PLONE_THEMING_PLONE_VERSION_4`` for Plone 4:
 
 .. code-block:: xml
 
