@@ -25,7 +25,7 @@ Show how to activate the add-on
     ...  setup_select_add_on.png
     ...  id=addons-enabled
 
-    Click button  xpath=//*[@id='addons-spirit-plone-theming']/form/input[@type='submit']
+    Click button  xpath=//*[@value='spirit.plone.theming']/ancestor::form//input[@type='submit']
 
     Page should contain element  xpath=//*[@value='spirit.plone.theming']
 
