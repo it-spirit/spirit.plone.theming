@@ -37,7 +37,7 @@ Site Favicon
 You can upload a custom favicon for your Plone site.
 Any image format can be uploaded, but \*.ico and \*.png files work best.
 If no custom icon is set, Plone's default favicon will be used.
-
+The favicon link HTML markup will be available as content with the CSS id ``PLONE_THEMING_FAVICON``.
 
 
 Header Option
@@ -45,7 +45,10 @@ Header Option
 
 .. image:: ../_images/settings-header_option.png
 
-Select the header variant which should be used for the current theme.
+You can select one of the available header options which are provided by the theme, e.g. ``header-v1`` and ``header-v2``.
+If no option is selected, the theme might render a default header.
+The selected header option will be available as content with the CSS id ``PLONE_THEMING_HEADER_OPTION``.
+The theme should set all available header options using the ``spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_header_options`` registry key.
 
 
 Footer Option
@@ -53,7 +56,10 @@ Footer Option
 
 .. image:: ../_images/settings-footer_option.png
 
-Select the footer variant which should be used for the current theme.
+You can select one of the available footer options which are provided by the theme, e.g. ``footer-v1`` and ``footer-v2``.
+If no option is selected, the theme might render a default footer.
+The selected footer option will be available as content with the CSS id ``PLONE_THEMING_FOOTER_OPTION``.
+The theme should set all available footer options using the ``spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_footer_options`` registry key.
 
 
 Color Option
@@ -61,7 +67,10 @@ Color Option
 
 .. image:: ../_images/settings-color_option.png
 
-Select the color variant which should be used for the current theme.
+You can select one of the available color options which are provided by the theme, e.g. ``blue`` and ``red``.
+If no option is selected, the theme might use a default color.
+The selected color option will be available as content with the CSS id ``PLONE_THEMING_COLOR_OPTION``.
+The theme should set all available color options using the ``spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_color_options`` registry key.
 
 
 Pattern Option
@@ -69,7 +78,12 @@ Pattern Option
 
 .. image:: ../_images/settings-pattern_option.png
 
-Select the background pattern which should be used for the current theme.
+You can select one of the available background pattern options which are provided by the theme, e.g. ``diagonal-noise`` and ``fabric-plaid``.
+If no option is selected, the theme might use a default pattern.
+The selected pattern option will be available as content with the CSS id ``PLONE_THEMING_PATTERN_OPTION``.
+The theme should set all available pattern options using the ``spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_pattern_options`` registry key.
+
+This option could also be used to switch between color modes, e.g. ``light`` and ``dark``, if no patterns are available in the theme.
 
 
 Layout Option
@@ -77,7 +91,10 @@ Layout Option
 
 .. image:: ../_images/settings-layout_option.png
 
-Select the layout variant which should be used for the current theme.
+You can select one of the available layout options which are provided by the theme, e.g. ``wide`` and ``boxed``.
+If no option is selected, the theme might use a default layout.
+The selected layout option will be available as content with the CSS id ``PLONE_THEMING_LAYOUT_OPTION``.
+The theme should set all available layout options using the ``spirit.plone.theming.interfaces.IPloneThemingVocabularies.available_layout_options`` registry key.
 
 
 Slogan
@@ -88,13 +105,6 @@ Slogan
 Add a slogan for your website (HTML is supported).
 The slogan will be available as content with the CSS id ``PLONE_THEMING_SLOGAN``.
 
-Diazo example:
-
-.. code-block:: xml
-
-    <replace css:content="#PLONE_THEMING_SLOGAN" css:theme="#header-headline" />
-    <drop css:if-not-content="#PLONE_THEMING_SLOGAN" css:theme="#header-headline" />
-
 
 Phone number
 """"""""""""
@@ -103,13 +113,6 @@ Phone number
 
 Add a phone number for your primary website contact.
 The phone number will be available as content with the CSS id ``PLONE_THEMING_PHONE_NUMBER`` and ``PLONE_THEMING_PHONE_NUMBER_RAW`` (all non-number characters removed).
-
-Diazo example:
-
-.. code-block:: xml
-
-    <replace css:content="#PLONE_THEMING_PHONE_NUMBER" css:theme=".site-social-links .phone" />
-    <drop css:if-not-content="#PLONE_THEMING_PHONE_NUMBER" css:theme=".site-social-links .phone" />
 
 
 E-Mail Address
