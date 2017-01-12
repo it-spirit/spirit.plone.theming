@@ -6,7 +6,7 @@ from setuptools import (
     setup,
 )
 
-version = '0.2.dev0'
+version = '0.2'
 description = "Theming extensions for Plone Websites."
 long_description = ('\n'.join([
     open('README.rst').read(),
