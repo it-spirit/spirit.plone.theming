@@ -82,7 +82,17 @@ Show how to change the settings
     ...  settings-footer_text.png
     ...  id=formfield-form-widgets-footer_text
 
+    Page should contain element  id=formfield-form-widgets-hide_footer
+    Capture and crop page screenshot
+    ...  settings-hide_footer.png
+    ...  id=formfield-form-widgets-hide_footer
+
     Page should contain element  id=formfield-form-widgets-colophon_text
     Capture and crop page screenshot
     ...  settings-colophon_text.png
     ...  id=formfield-form-widgets-colophon_text
+
+    Page should contain element  id=formfield-form-widgets-hide_colophon
+    Capture and crop page screenshot
+    ...  settings-hide_colophon.png
+    ...  id=formfield-form-widgets-hide_colophon

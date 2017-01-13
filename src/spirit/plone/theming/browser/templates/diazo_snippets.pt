@@ -72,6 +72,22 @@
         tal:attributes="data-plonetheming-value item">
     </section>
 
+    <section id="PLONE_THEMING_HIDE_COLOPHON" data-plonetheming-value=""
+        tal:define="item view/hide_colophon | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>Hide Colophon Text</p>
+    </section>
+
+    <section id="PLONE_THEMING_HIDE_FOOTER" data-plonetheming-value=""
+        tal:define="item view/hide_footer | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>Hide Footer Text</p>
+    </section>
+
     <section id="PLONE_THEMING_HIDE_SEARCHBOX" data-plonetheming-value=""
         tal:define="item view/hide_searchbox | nothing"
         tal:condition="item"

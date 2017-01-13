@@ -168,6 +168,15 @@ Example:
      <p>&copy; Copyright 2009-{year} Your Company Name.</p>
 
 
+Hide Footer Text
+""""""""""""""""
+
+.. image:: ../_images/settings-hide_footer.png
+
+If enabled, the footer text (available in the footer part) will be removed in the theme.
+The footer option will be available as content with the CSS id ``PLONE_THEMING_HIDE_FOOTER`` if enabled.
+
+
 Custom Colophon Text
 """"""""""""""""""""
 
@@ -186,3 +195,12 @@ Example:
 .. code-block:: html
 
      <p>Powered by Plone, Python &amp; <a href="{portal_url}">Your Company Name</a></p>
+
+
+Hide Colophon Text
+""""""""""""""""""
+
+.. image:: ../_images/settings-hide_colophon.png
+
+If enabled, the colophon text (available in the footer part) will be removed in the theme.
+The colophon option will be available as content with the CSS id ``PLONE_THEMING_HIDE_COLOPHON`` if enabled.

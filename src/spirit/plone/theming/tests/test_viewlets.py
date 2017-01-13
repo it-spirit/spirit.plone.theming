@@ -371,6 +371,33 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             self.assertTrue('Copyright 2009-' in output)
             self.assertTrue(year in output)
 
+    def test_diazo_snippet_hide_footer(self):
+        """Validate the 'hide_footer' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        rendered = dsv.render()
+        self.assertFalse(dsv.hide_footer)
+        try:
+            self.assertNotIn('PLONE_THEMING_HIDE_FOOTER', rendered)
+        except AttributeError:
+            self.assertFalse('PLONE_THEMING_HIDE_FOOTER' in rendered)
+
+    def test_diazo_snippet_hide_footer_set(self):
+        """Validate the 'hide_footer' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        ploneapi.portal.set_registry_record(
+            name='hide_footer',
+            value=True,
+            interface=IPloneThemeSettings,
+        )
+        rendered = dsv.render()
+        self.assertTrue(dsv.hide_footer)
+        try:
+            self.assertIn('PLONE_THEMING_HIDE_FOOTER', rendered)
+        except AttributeError:
+            self.assertTrue('PLONE_THEMING_HIDE_FOOTER' in rendered)
+
     def test_diazo_snippet_colophon_text(self):
         """Validate the 'colophon_text' attribute."""
         dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
@@ -397,3 +424,30 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         except AttributeError:
             self.assertTrue('Powered by Plone, Python' in output)
             self.assertTrue(url in output)
+
+    def test_diazo_snippet_hide_colophon(self):
+        """Validate the 'hide_colophon' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        rendered = dsv.render()
+        self.assertFalse(dsv.hide_colophon)
+        try:
+            self.assertNotIn('PLONE_THEMING_HIDE_COLOPHON', rendered)
+        except AttributeError:
+            self.assertFalse('PLONE_THEMING_HIDE_COLOPHON' in rendered)
+
+    def test_diazo_snippet_hide_colophon_set(self):
+        """Validate the 'hide_colophon' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        ploneapi.portal.set_registry_record(
+            name='hide_colophon',
+            value=True,
+            interface=IPloneThemeSettings,
+        )
+        rendered = dsv.render()
+        self.assertTrue(dsv.hide_colophon)
+        try:
+            self.assertIn('PLONE_THEMING_HIDE_COLOPHON', rendered)
+        except AttributeError:
+            self.assertTrue('PLONE_THEMING_HIDE_COLOPHON' in rendered)

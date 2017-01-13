@@ -265,6 +265,17 @@ Custom Footer Text
         />
 
 
+Hide Footer Text
+""""""""""""""""
+
+.. code-block:: xml
+
+    <rules css:if-not-content="#PLONE_THEMING_HIDE_FOOTER">
+      ...
+    </rules>
+    <drop css:theme-children=".footer-copyright" css:if-content="#PLONE_THEMING_HIDE_FOOTER" />
+
+
 Custom Colophon Text
 """"""""""""""""""""
 
@@ -282,6 +293,17 @@ Custom Colophon Text
         css:theme-children=".footer-colophon"
         css:content-children="#PLONE_THEMING_COLOPHON_TEXT"
         />
+
+
+Hide Colophon Text
+""""""""""""""""""
+
+.. code-block:: xml
+
+    <rules css:if-not-content="#PLONE_THEMING_HIDE_COLOPHON">
+      ...
+    </rules>
+    <drop css:theme-children=".footer-colophon" css:if-content="#PLONE_THEMING_HIDE_COLOPHON" />
 
 
 Additional available snippets

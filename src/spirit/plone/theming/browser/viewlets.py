@@ -129,3 +129,13 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def favicon(self):
         return utils.get_site_favicon()
+
+    @property
+    @view.memoize_contextless
+    def hide_footer(self):
+        return self._get_registry_record(name='hide_footer')
+
+    @property
+    @view.memoize_contextless
+    def hide_colophon(self):
+        return self._get_registry_record(name='hide_colophon')

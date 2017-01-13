@@ -164,6 +164,18 @@ class IPloneThemeSettings(form.Schema):
         title=_(u'Custom Footer Text'),
     )
 
+    hide_footer = schema.Bool(
+        description=_(
+            u'If enabled, the footer text (available in the footer part) '
+            u'will be removed in the theme.'
+            u'The footer option will be available as content '
+            u'with the CSS id <em>PLONE_THEMING_HIDE_FOOTER</em> '
+            u'if enabled.'
+        ),
+        required=False,
+        title=_(u'Hide Footer Text'),
+    )
+
     colophon_text = schema.Text(
         description=_(
             u'Add your custom colophon text (HTML is supported). '
@@ -178,6 +190,18 @@ class IPloneThemeSettings(form.Schema):
         ),
         required=False,
         title=_(u'Custom Colophon Text'),
+    )
+
+    hide_colophon = schema.Bool(
+        description=_(
+            u'If enabled, the colophon text (available in the footer part) '
+            u'will be removed in the theme.'
+            u'The colophon option will be available as content '
+            u'with the CSS id <em>PLONE_THEMING_HIDE_COLOPHON</em> '
+            u'if enabled.'
+        ),
+        required=False,
+        title=_(u'Hide Colophon Text'),
     )
 
 

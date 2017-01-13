@@ -331,6 +331,20 @@ Diazo example (Plone 5)::
         />
 
 
+Hide Footer Text
+################
+
+If enabled, the footer text (available in the footer part) will be removed in the theme.
+The footer option will be available as content with the CSS id ``PLONE_THEMING_HIDE_FOOTER`` if enabled.
+
+Diazo example::
+
+    <rules css:if-not-content="#PLONE_THEMING_HIDE_FOOTER">
+      ...
+    </rules>
+    <drop css:theme-children=".footer-copyright" css:if-content="#PLONE_THEMING_HIDE_FOOTER" />
+
+
 Custom Colophon Text
 ####################
 
@@ -360,6 +374,20 @@ Diazo example (Plone 5)::
         css:theme-children=".footer-colophon"
         css:content-children="#PLONE_THEMING_COLOPHON_TEXT"
         />
+
+
+Hide Colophon Text
+##################
+
+If enabled, the colophon text (available in the footer part) will be removed in the theme.
+The colophon option will be available as content with the CSS id ``PLONE_THEMING_HIDE_COLOPHON`` if enabled.
+
+Diazo example::
+
+    <rules css:if-not-content="#PLONE_THEMING_HIDE_COLOPHON">
+      ...
+    </rules>
+    <drop css:theme-children=".footer-colophon" css:if-content="#PLONE_THEMING_HIDE_COLOPHON" />
 
 
 Additional available snippets
