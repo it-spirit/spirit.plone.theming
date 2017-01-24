@@ -5,7 +5,8 @@ Changelog
 0.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add option to hide footer and colophon texts completely.
+- Update installation docs and documentation images.
 
 
 0.2 (2017-01-12)
