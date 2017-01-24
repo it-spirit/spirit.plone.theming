@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.3 (unreleased)
+0.3 (2017-01-24)
 ----------------
 
 - Add option to hide footer and colophon texts completely.
