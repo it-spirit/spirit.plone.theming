@@ -6,6 +6,7 @@ Changelog
 ----------------
 
 - Load collective.monkeypatcher, if available, to prevent ConfigurationError.
+- Add ``site_logo`` option to upload a custom site logo (Plone 4 only).
 
 
 0.3 (2017-01-24)
