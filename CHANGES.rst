@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.4 (unreleased)
+0.4 (2017-05-18)
 ----------------
 
 - Load collective.monkeypatcher, if available, to prevent ConfigurationError.
