@@ -32,6 +32,14 @@ If disabled, the content is hidden with CSS.
 There is also a debug option which will be available as content with the CSS id ``PLONE_THEMING_DEBUG`` if enabled.
 
 
+Site Logo
+"""""""""
+
+When running on Plone 4, you can upload a custom site logo for your Plone site.
+In Plone 5 the site logo can be customized in the site settings, so this setting will only be available for Plone 4 or below.
+If no custom logo is set, Plone's default logo will be used.
+For Plone 4 and below, there is a custom logo viewlet which will render the logo based on the theme setting.
+
 
 Site Favicon
 """"""""""""
