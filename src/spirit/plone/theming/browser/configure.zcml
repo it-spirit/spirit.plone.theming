@@ -12,9 +12,9 @@
   <!-- Browser Resources. -->
   <!-- ================== -->
   <browser:resourceDirectory
-      name="spirit.plone.theming"
       directory="static"
       layer="..interfaces.ISpiritPloneThemingLayer"
+      name="spirit.plone.theming"
       />
 
 
@@ -42,17 +42,21 @@
       />
 
 
+  <!-- Show the uploaded logo. -->
   <browser:page
-      for="*"
-      name="site-logo-plone4"
       class=".logo.Logo"
+      for="*"
+      layer="..interfaces.ISpiritPloneThemingLayer"
+      name="site-logo-plone4"
       permission="zope.Public"
       />
 
+  <!-- Show the uploaded favicon. -->
   <browser:page
-      for="*"
-      name="site-favicon"
       class=".favicon.Favicon"
+      for="*"
+      layer="..interfaces.ISpiritPloneThemingLayer"
+      name="site-favicon"
       permission="zope.Public"
       />
 
