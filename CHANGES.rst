@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.5 (unreleased)
+0.5 (2017-05-18)
 ----------------
 
 - Instead of providing a diazo snippet for the logo, provide a custom logo viewlet.
