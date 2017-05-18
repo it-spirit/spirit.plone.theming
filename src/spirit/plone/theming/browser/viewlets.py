@@ -8,7 +8,10 @@ import datetime
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api as ploneapi
 from plone.api.exc import InvalidParameterError
-from plone.app.layout.viewlets.common import ViewletBase
+from plone.app.layout.viewlets.common import (
+    LogoViewlet as LogoViewletPlone,
+    ViewletBase,
+)
 from plone.memoize import view
 
 # local imports
@@ -17,7 +20,7 @@ from spirit.plone.theming.interfaces import IPloneThemeSettings
 
 
 class DiazoSnippetViewlet(ViewletBase):
-    """Rendered diazo snippets.."""
+    """Rendered diazo snippets."""
 
     index = ViewPageTemplateFile('templates/diazo_snippets.pt')
 
@@ -128,11 +131,6 @@ class DiazoSnippetViewlet(ViewletBase):
 
     @property
     @view.memoize_contextless
-    def logo(self):
-        return utils.get_site_logo()
-
-    @property
-    @view.memoize_contextless
     def favicon(self):
         return utils.get_site_favicon()
 
@@ -145,3 +143,15 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def hide_colophon(self):
         return self._get_registry_record(name='hide_colophon')
+
+
+class LogoViewlet(LogoViewletPlone):
+    """Show the site logo."""
+
+    index = ViewPageTemplateFile('templates/logo.pt')
+
+    def update(self):
+        super(LogoViewlet, self).update()
+
+        self.navigation_root_title = self.portal_state.navigation_root_title()
+        self.img_src = utils.get_site_logo()

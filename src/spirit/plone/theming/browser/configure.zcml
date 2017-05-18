@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="spirit.plone.theming">
 
   <!-- Include package dependencies. -->
@@ -29,6 +30,19 @@
       permission="zope2.View"
       template="templates/diazo_snippets.pt"
       />
+
+
+  <!-- The customized logo for Plone 4. -->
+  <!-- =============================== -->
+  <configure zcml:condition="not-have plone-5">
+    <browser:viewlet
+        class=".viewlets.LogoViewlet"
+        layer="..interfaces.ISpiritPloneThemingLayer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        name="plone.logo"
+        permission="zope2.View"
+        />
+  </configure>
 
 
   <!-- Controlpanel View. -->
