@@ -25,6 +25,13 @@
                         data-plonetheming-value item">
     </section>
 
+    <section id="PLONE_THEMING_LOGO"
+        tal:define="item view/logo | nothing"
+        tal:condition="item">
+      <img src="logo.png"
+          tal:attributes="src item" />
+    </section>
+
     <section id="PLONE_THEMING_FAVICON"
         tal:define="item view/favicon | nothing"
         tal:condition="item">

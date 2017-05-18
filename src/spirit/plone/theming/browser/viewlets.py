@@ -18,6 +18,7 @@ from spirit.plone.theming.interfaces import IPloneThemeSettings
 
 class DiazoSnippetViewlet(ViewletBase):
     """Rendered diazo snippets.."""
+
     index = ViewPageTemplateFile('templates/diazo_snippets.pt')
 
     def _get_registry_record(self, name=None):
@@ -124,6 +125,11 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def slogan(self):
         return self._get_registry_record(name='slogan')
+
+    @property
+    @view.memoize_contextless
+    def logo(self):
+        return utils.get_site_logo()
 
     @property
     @view.memoize_contextless

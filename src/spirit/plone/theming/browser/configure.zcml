@@ -44,6 +44,13 @@
 
   <browser:page
       for="*"
+      name="site-logo-plone4"
+      class=".logo.Logo"
+      permission="zope.Public"
+      />
+
+  <browser:page
+      for="*"
       name="site-favicon"
       class=".favicon.Favicon"
       permission="zope.Public"

@@ -8,6 +8,7 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 # local imports
+from spirit.plone.theming import PLONE_4
 from spirit.plone.theming.browser.viewlets import DiazoSnippetViewlet
 from spirit.plone.theming.interfaces import (
     IPloneThemeSettings,
@@ -109,6 +110,29 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             self.assertIn(snippet_id, rendered)
         except AttributeError:
             self.assertTrue(snippet_id in rendered)
+
+    def test_diazo_snippet_logo(self):
+        """Validate the 'logo' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        url = '{0}/logo.png'.format(self.portal.absolute_url())
+        self.assertEqual(dsv.logo, url)
+
+    def test_diazo_snippet_logo_set(self):
+        """Validate the 'logo' attribute."""
+        if not PLONE_4:
+            return
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        ploneapi.portal.set_registry_record(
+            name='site_logo',
+            value=SITE_FAVICON_B64,
+            interface=IPloneThemeSettings,
+        )
+        url = '{0}/@@site-logo-plone4/pixel.png'.format(
+            self.portal.absolute_url()
+        )
+        self.assertEqual(dsv.logo, url)
 
     def test_diazo_snippet_favicon(self):
         """Validate the 'favicon' attribute."""

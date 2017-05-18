@@ -8,7 +8,10 @@ from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 # local imports
-from spirit.plone.theming import _
+from spirit.plone.theming import (
+    _,
+    PLONE_4,
+)
 
 
 class ISpiritPloneThemingLayer(IDefaultBrowserLayer):
@@ -25,6 +28,7 @@ class IPloneThemeSettings(form.Schema):
     This describes records stored in the configuration registry and obtainable
     via plone.registry.
     """
+
     debug = schema.Bool(
         description=_(
             u'If enabled, the content of the diazo snippets will be '
@@ -34,6 +38,13 @@ class IPloneThemeSettings(form.Schema):
         required=False,
         title=_(u'Enable Debug Mode'),
     )
+
+    if PLONE_4:
+        site_logo = schema.ASCII(
+            description=_(u'This shows a custom logo on your site.'),
+            required=False,
+            title=_(u'Site Logo'),
+        )
 
     site_favicon = schema.ASCII(
         description=_(u'This shows a custom favicon on your site.'),
@@ -206,6 +217,7 @@ class IPloneThemeSettings(form.Schema):
 
 
 class IPloneThemingVocabularies(form.Schema):
+    """Plone Theming Vocabularies."""
 
     available_header_options = schema.Set(
         title=_(u'Available Header Options'),

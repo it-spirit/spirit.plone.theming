@@ -10,7 +10,10 @@ from zope.component import getUtility
 from zope.interface import implementer
 
 # local imports
-from spirit.plone.theming import _
+from spirit.plone.theming import (
+    _,
+    PLONE_4,
+)
 from spirit.plone.theming.interfaces import (
     IPloneThemeSettings,
     IPloneThemeSettingsEditForm,
@@ -50,6 +53,8 @@ class PloneThemeSettingsEditForm(SelfHealingRegistryEditForm):
 
     def updateFields(self):
         super(PloneThemeSettingsEditForm, self).updateFields()
+        if PLONE_4:
+            self.fields['site_logo'].widgetFactory = NamedImageFieldWidget
         self.fields['site_favicon'].widgetFactory = NamedImageFieldWidget
 
     def updateWidgets(self):
