@@ -422,6 +422,45 @@ Diazo example::
     </rules>
 
 
+themingplugins_available
+------------------------
+
+Checks if `plone.app.themingplugins <https://pypi.python.org/pypi/plone.app.themingplugins>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMINGPLUGINS_AVAILABLE``.
+
+Diazo example::
+
+    <rules css:if-content="#PLONE_THEMING_THEMINGPLUGINS_AVAILABLE">
+      <!-- Load views defined with plone.app.themingplugins. -->
+    </rules>
+
+
+themefragments_available
+------------------------
+
+Checks if `collective.themefragments <https://pypi.python.org/pypi/collective.themefragments>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE``.
+
+Diazo example::
+
+    <rules css:if-content="#PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE">
+      <!-- Load fragments defined with collective.themefragments. -->
+    </rules>
+
+
+rapido_available
+----------------
+
+Checks if `rapido.plone <https://pypi.python.org/pypi/rapido.plone>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE``.
+
+Diazo example::
+
+    <rules css:if-content="#PLONE_THEMING_RAPIDO_AVAILABLE">
+      <!-- Load rapido.plone components. -->
+    </rules>
+
+
 Adding Available Options From Within A Diazo Theme
 ==================================================
 

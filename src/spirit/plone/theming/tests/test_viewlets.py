@@ -451,3 +451,46 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             self.assertIn('PLONE_THEMING_HIDE_COLOPHON', rendered)
         except AttributeError:
             self.assertTrue('PLONE_THEMING_HIDE_COLOPHON' in rendered)
+
+    def test_diazo_snippet_themingplugins_available(self):
+        """Validate the 'themingplugins_available' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        rendered = dsv.render()
+        self.assertFalse(dsv.themingplugins_available)
+        try:
+            self.assertNotIn(
+                'PLONE_THEMING_THEMINGPLUGINS_AVAILABLE',
+                rendered,
+            )
+        except AttributeError:
+            self.assertFalse(
+                'PLONE_THEMING_THEMINGPLUGINS_AVAILABLE' in rendered
+            )
+
+    def test_diazo_snippet_themefragments_available(self):
+        """Validate the 'themefragments_available' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        rendered = dsv.render()
+        self.assertFalse(dsv.themefragments_available)
+        try:
+            self.assertNotIn(
+                'PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE',
+                rendered,
+            )
+        except AttributeError:
+            self.assertFalse(
+                'PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE' in rendered
+            )
+
+    def test_diazo_snippet_rapido_available(self):
+        """Validate the 'rapido_available' attribute."""
+        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv.update()
+        rendered = dsv.render()
+        self.assertFalse(dsv.rapido_available)
+        try:
+            self.assertNotIn('PLONE_THEMING_RAPIDO_AVAILABLE', rendered)
+        except AttributeError:
+            self.assertFalse('PLONE_THEMING_RAPIDO_AVAILABLE' in rendered)

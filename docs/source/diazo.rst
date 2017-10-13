@@ -326,3 +326,42 @@ It will be available as content with the CSS id ``PLONE_THEMING_PLONE_VERSION_${
     <rules css:if-content="#PLONE_THEMING_PLONE_VERSION_5">
       <!-- Do some Plone 5 specific stuff -->
     </rules>
+
+
+plone.app.themingplugins Availability
+"""""""""""""""""""""""""""""""""""""
+
+Checks if `plone.app.themingplugins <https://pypi.python.org/pypi/plone.app.themingplugins>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMINGPLUGINS_AVAILABLE``.
+
+.. code-block:: xml
+
+    <rules css:if-content="#PLONE_THEMING_THEMINGPLUGINS_AVAILABLE">
+      <!-- Load views defined with plone.app.themingplugins. -->
+    </rules>
+
+
+collective.themefragments Availability
+""""""""""""""""""""""""""""""""""""""
+
+Checks if `collective.themefragments <https://pypi.python.org/pypi/collective.themefragments>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE``.
+
+.. code-block:: xml
+
+    <rules css:if-content="#PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE">
+      <!-- Load fragments defined with collective.themefragments. -->
+    </rules>
+
+
+rapido.plone Availability
+"""""""""""""""""""""""""
+
+Checks if `rapido.plone <https://pypi.python.org/pypi/rapido.plone>`_ is available.
+It will be available as content with the CSS id ``PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE``.
+
+.. code-block:: xml
+
+    <rules css:if-content="#PLONE_THEMING_RAPIDO_AVAILABLE">
+      <!-- Load rapido.plone components. -->
+    </rules>

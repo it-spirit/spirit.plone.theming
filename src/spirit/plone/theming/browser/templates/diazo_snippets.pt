@@ -138,5 +138,29 @@
         tal:content="structure item">
     </section>
 
+    <section id="PLONE_THEMING_THEMINGPLUGINS_AVAILABLE" data-plonetheming-value=""
+        tal:define="item view/themingplugins_available | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>plone.app.themingplugins is available</p>
+    </section>
+
+    <section id="PLONE_THEMING_THEMEFRAGMENTS_AVAILABLE" data-plonetheming-value=""
+        tal:define="item view/themefragments_available | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>collective.themefragments is available</p>
+    </section>
+
+    <section id="PLONE_THEMING_RAPIDO_AVAILABLE" data-plonetheming-value=""
+        tal:define="item view/rapido_available | nothing"
+        tal:condition="item"
+        i18n:translate=""
+        tal:attributes="data-plonetheming-value item">
+      <p>rapido.plone is available</p>
+    </section>
+
   </div>
 </html>

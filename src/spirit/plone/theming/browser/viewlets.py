@@ -3,6 +3,7 @@
 
 # python imports
 import datetime
+import pkg_resources
 
 # zope imports
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -143,6 +144,33 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def hide_colophon(self):
         return self._get_registry_record(name='hide_colophon')
+
+    @property
+    @view.memoize_contextless
+    def themingplugins_available(self):
+        try:
+            pkg_resources.get_distribution('plone.app.themingplugins')
+            return True
+        except pkg_resources.DistributionNotFound:
+            return False
+
+    @property
+    @view.memoize_contextless
+    def themefragments_available(self):
+        try:
+            pkg_resources.get_distribution('collective.themefragments')
+            return True
+        except pkg_resources.DistributionNotFound:
+            return False
+
+    @property
+    @view.memoize_contextless
+    def rapido_available(self):
+        try:
+            pkg_resources.get_distribution('rapido.plone')
+            return True
+        except pkg_resources.DistributionNotFound:
+            return False
 
 
 class LogoViewlet(LogoViewletPlone):
