@@ -5,7 +5,7 @@ Changelog
 0.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add snippets to show availability of theming addons.
 
 
 0.5 (2017-05-18)
