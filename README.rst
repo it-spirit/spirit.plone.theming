@@ -1,12 +1,13 @@
+====================
 spirit.plone.theming
 ====================
 
-This Plone Add-On provides some theming extensions for `Plone`_ Websites.
+This Plone Add-On provides some theming extensions for `Plone <https://plone.org>`_ Websites.
 In order to use it, you would need a diazo theme which supports the provided options.
 
 
 Mostly Harmless
----------------
+===============
 
 .. image:: https://travis-ci.org/it-spirit/spirit.plone.theming.png?branch=master
     :target: http://travis-ci.org/it-spirit/spirit.plone.theming
@@ -14,13 +15,13 @@ Mostly Harmless
 
 
 Available Options
------------------
+=================
 
 Below is a list of currently supported options.
 Note that not every theme by default supports all of those options.
 
 Enable Debug Mode
-#################
+-----------------
 
 If enabled, the content of the diazo snippets will be visible to the user.
 If disabled, the content is hidden with CSS.
@@ -42,7 +43,7 @@ Diazo example::
 
 
 Site Logo
-#########
+---------
 
 When running on Plone 4, you can upload a custom site logo for your Plone site.
 In Plone 5 the site logo can be customized in the site settings, so this setting will only be available for Plone 4 or below.
@@ -51,7 +52,7 @@ For Plone 4 and below, there is a custom logo viewlet which will render the logo
 
 
 Site Favicon
-############
+------------
 
 You can upload a custom favicon for your Plone site.
 Any image format can be uploaded, but \*.ico and \*.png files work best.
@@ -67,7 +68,7 @@ Diazo example::
 
 
 Header Option
-#############
+-------------
 
 You can select one of the available header options which are provided by the theme, e.g. ``header-v1`` and ``header-v2``.
 If no option is selected, the theme might render a default header.
@@ -105,7 +106,7 @@ Diazo example::
 
 
 Footer Option
-#############
+-------------
 
 You can select one of the available footer options which are provided by the theme, e.g. ``footer-v1`` and ``footer-v2``.
 If no option is selected, the theme might render a default footer.
@@ -143,7 +144,7 @@ Diazo example::
 
 
 Color Option
-############
+------------
 
 You can select one of the available color options which are provided by the theme, e.g. ``blue`` and ``red``.
 If no option is selected, the theme might use a default color.
@@ -165,7 +166,7 @@ Diazo example::
 
 
 Pattern Option
-##############
+--------------
 
 You can select one of the available background pattern options which are provided by the theme, e.g. ``diagonal-noise`` and ``fabric-plaid``.
 If no option is selected, the theme might use a default pattern.
@@ -193,7 +194,7 @@ Diazo example::
 
 
 Layout Option
-#############
+-------------
 
 You can select one of the available layout options which are provided by the theme, e.g. ``wide`` and ``boxed``.
 If no option is selected, the theme might use a default layout.
@@ -225,7 +226,7 @@ Diazo example::
 
 
 Slogan
-######
+------
 
 Add a slogan for your website (HTML is supported).
 The slogan will be available as content with the CSS id ``PLONE_THEMING_SLOGAN``.
@@ -236,8 +237,8 @@ Diazo example::
     <drop css:if-not-content="#PLONE_THEMING_SLOGAN" css:theme="#header-headline" />
 
 
-Phone number
-############
+Phone Number
+------------
 
 Add a phone number for your primary website contact.
 The phone number will be available as content with the CSS id ``PLONE_THEMING_PHONE_NUMBER`` and ``PLONE_THEMING_PHONE_NUMBER_RAW`` (all non-number characters removed).
@@ -249,7 +250,7 @@ Diazo example::
 
 
 E-Mail Address
-##############
+--------------
 
 Add a valid email address.
 The email address will be available as content with the CSS id ``PLONE_THEMING_EMAIL``.
@@ -261,7 +262,7 @@ Diazo example::
 
 
 Hide Search Box
-###############
+---------------
 
 If enabled, the search box (available in the header part) will be removed in the theme.
 The searchbox option will be available as content with the CSS id ``PLONE_THEMING_HIDE_SEARCHBOX`` if enabled.
@@ -286,7 +287,7 @@ Diazo example::
 
 
 Slideshow Fullscreen Mode
-#########################
+-------------------------
 
 If enabled, a slideshow (if available) will be rendered in fullscreen mode.
 Depending on the theme, this might be above the main menu or as header background.
@@ -311,7 +312,7 @@ Diazo example::
 
 
 Custom Footer Text
-##################
+------------------
 
 Add your custom footer text (HTML is supported).
 The footer text will be available as content with the CSS id ``PLONE_THEMING_FOOTER_TEXT``.
@@ -341,7 +342,7 @@ Diazo example (Plone 5)::
 
 
 Hide Footer Text
-################
+----------------
 
 If enabled, the footer text (available in the footer part) will be removed in the theme.
 The footer option will be available as content with the CSS id ``PLONE_THEMING_HIDE_FOOTER`` if enabled.
@@ -355,7 +356,7 @@ Diazo example::
 
 
 Custom Colophon Text
-####################
+--------------------
 
 Add your custom colophon text (HTML is supported).
 The colophon text will be available as content with the CSS id ``PLONE_THEMING_COLOPHON_TEXT``.
@@ -386,7 +387,7 @@ Diazo example (Plone 5)::
 
 
 Hide Colophon Text
-##################
+------------------
 
 If enabled, the colophon text (available in the footer part) will be removed in the theme.
 The colophon option will be available as content with the CSS id ``PLONE_THEMING_HIDE_COLOPHON`` if enabled.
@@ -399,13 +400,13 @@ Diazo example::
     <drop css:theme-children=".footer-colophon" css:if-content="#PLONE_THEMING_HIDE_COLOPHON" />
 
 
-Additional available snippets
------------------------------
+Additional Available Snippets
+=============================
 
 The following snippets are always available, as soon as the add-on is activated.
 
 plone_version
-#############
+-------------
 
 It will show the currently used Plone major version number.
 It will be available as content with the CSS id ``PLONE_THEMING_PLONE_VERSION_${plone_version}``, e.g. ``PLONE_THEMING_PLONE_VERSION_4`` for Plone 4.
@@ -421,8 +422,8 @@ Diazo example::
     </rules>
 
 
-Adding available options from within a Diazo Theme
---------------------------------------------------
+Adding Available Options From Within A Diazo Theme
+==================================================
 
 By default, the available options for header, footer, color and layout are empty.
 But a theme can add it's options to the list of available items by adding elements to the ``plone.registry`` based record values.
@@ -513,7 +514,7 @@ To do this, add a ``registry.xml`` file to your uninstall profile with the follo
       </record>
     </registry>
 
-``spirit.plone.theming`` has a dependency to `collective.themesitesetup`_, which allows the embedding of GenericSetup import and export steps into zipped theme packages.
+``spirit.plone.theming`` has a dependency to `collective.themesitesetup <https://github.com/collective/collective.themesitesetup>`_, which allows the embedding of GenericSetup import and export steps into zipped theme packages.
 To enable this, add the following lines to your theme's manifest.cfg::
 
   [theme:genericsetup]
@@ -525,8 +526,4 @@ Add the two folders ``install`` and ``uninstall`` next to your manifest.cfg and 
 
 .. note::
 
-    Themes created with `spirit.bob`_'s ``diazo_theme`` template already include the dependency to ``spirit.plone.theming`` and the required ``registry.xml`` files.
-
-.. _`Plone`: https://plone.org
-.. _`collective.themesitesetup`: https://github.com/collective/collective.themesitesetup
-.. _`spirit.bob`: https://github.com/it-spirit/spirit.bob
+    Themes created with `spirit.bob <https://github.com/it-spirit/spirit.bob>`_'s ``diazo_theme`` template already include the dependency to ``spirit.plone.theming`` and the required ``registry.xml`` files.
