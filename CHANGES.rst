@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.6 (unreleased)
+0.6 (2017-10-13)
 ----------------
 
 - Add snippets to show availability of theming addons.
