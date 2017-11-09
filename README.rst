@@ -9,9 +9,25 @@ In order to use it, you would need a diazo theme which supports the provided opt
 Mostly Harmless
 ===============
 
-.. image:: https://travis-ci.org/it-spirit/spirit.plone.theming.png?branch=master
-    :target: http://travis-ci.org/it-spirit/spirit.plone.theming
-    :alt: Travis CI status
+.. image:: https://img.shields.io/pypi/v/spirit.plone.theming.svg
+   :target: https://pypi.python.org/pypi/spirit.plone.theming
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/pypi/pyversions/spirit.plone.theming.svg
+   :target: https://pypi.python.org/pypi/spirit.plone.theming
+   :alt: Supported Python Versions
+
+.. image:: https://img.shields.io/travis/it-spirit/spirit.plone.theming.svg
+   :target: http://travis-ci.org/it-spirit/spirit.plone.theming
+   :alt: Travis CI status
+
+.. image:: https://img.shields.io/coveralls/github/it-spirit/spirit.plone.theming/master.svg
+   :target: https://coveralls.io/github/it-spirit/spirit.plone.theming?branch=master
+   :alt: Coverage Status
+
+.. image:: https://img.shields.io/readthedocs/spiritplonetheming.svg
+   :target: http://spiritplonetheming.readthedocs.io
+   :alt: Documentation
 
 
 Available Options
