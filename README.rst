@@ -17,7 +17,7 @@ Mostly Harmless
    :target: https://pypi.python.org/pypi/spirit.plone.theming
    :alt: Supported Python Versions
 
-.. image:: https://img.shields.io/travis/it-spirit/spirit.plone.theming.svg
+.. image:: https://img.shields.io/travis/it-spirit/spirit.plone.theming/master.svg
    :target: http://travis-ci.org/it-spirit/spirit.plone.theming
    :alt: Travis CI status
 
