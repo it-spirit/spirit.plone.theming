@@ -3,6 +3,7 @@
 *.mo
 *.pyc
 *~
+.coverage
 .installed.cfg
 .mr.developer.cfg
 bin/
@@ -13,5 +14,6 @@ dist/
 docs/build/
 downloads/
 eggs/
+htmlcov/
 parts/
 var/
