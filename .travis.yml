@@ -32,7 +32,7 @@ install:
   - sed -ie "s#test-4.x.cfg#test-$PLONE_VERSION.x.cfg#" travis.cfg
   - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
   - pip install pipenv
-  - pipenv --two install --dev
+  - pipenv install --dev
   - pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
   - pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True
 before_script:
