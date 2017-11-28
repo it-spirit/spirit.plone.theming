@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
+"""Browser view for getting the logo.
 
-# zope imports
+This view is for Plone 4 only, since Plone 5 introduced the logo upload
+in the site settings.
+"""
+
+
 from plone.formwidget.namedfile.converter import b64decode_file
 from plone.namedfile.browser import Download
 from plone.namedfile.file import NamedImage
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
-
-# local imports
 from spirit.plone.theming.interfaces import IPloneThemeSettings
+from zope.component import getUtility
 
 
 class Logo(Download):
+    """Browser view for getting the logo."""
 
     def __init__(self, context, request):
         super(Logo, self).__init__(context, request)

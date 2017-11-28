@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
-# zope imports
 from plone.directives import form
+from spirit.plone.theming import _
+from spirit.plone.theming import PLONE_4
 from zope import schema
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-
-# local imports
-from spirit.plone.theming import (
-    _,
-    PLONE_4,
-)
 
 
 class ISpiritPloneThemingLayer(IDefaultBrowserLayer):

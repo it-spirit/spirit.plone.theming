@@ -1,18 +1,13 @@
 # -*- coding: utf-8 -*-
 """Test spirit.plone.theming viewlets."""
 
-# zope imports
 from plone import api as ploneapi
 from plone.app.layout.viewlets.tests.base import ViewletsTestCase
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
-
-# local imports
 from spirit.plone.theming.browser.viewlets import DiazoSnippetViewlet
-from spirit.plone.theming.interfaces import (
-    IPloneThemeSettings,
-    IPloneThemingVocabularies,
-)
+from spirit.plone.theming.interfaces import IPloneThemeSettings
+from spirit.plone.theming.interfaces import IPloneThemingVocabularies
+from zope.component import getUtility
 
 
 # Red pixel with filename pixel.png

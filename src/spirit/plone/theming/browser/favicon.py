@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
+"""Browser view for getting the favicon."""
 
-# zope imports
 from plone.formwidget.namedfile.converter import b64decode_file
 from plone.namedfile.browser import Download
 from plone.namedfile.file import NamedImage
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
-
-# local imports
 from spirit.plone.theming.interfaces import IPloneThemeSettings
+from zope.component import getUtility
 
 
 class Favicon(Download):
+    """Browser view for getting the favicon."""
 
     def __init__(self, context, request):
         super(Favicon, self).__init__(context, request)

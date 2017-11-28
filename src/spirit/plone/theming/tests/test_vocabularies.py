@@ -1,23 +1,21 @@
 # -*- coding: utf-8 -*-
 """Test spirit.plone.theming vocabularies."""
 
-# python imports
+from plone import api as ploneapi
+from spirit.plone.theming.interfaces import IPloneThemingVocabularies
+from spirit.plone.theming.testing import INTEGRATION_TESTING
+from zope.component import queryUtility
+from zope.schema.interfaces import IVocabularyFactory
+
+
 try:
     import unittest2 as unittest
 except ImportError:
     import unittest
 
-# zope imports
-from plone import api as ploneapi
-from zope.component import queryUtility
-from zope.schema.interfaces import IVocabularyFactory
-
-# local imports
-from spirit.plone.theming.interfaces import IPloneThemingVocabularies
-from spirit.plone.theming.testing import INTEGRATION_TESTING
-
 
 class VocabulariesTestCase(unittest.TestCase):
+    """Validate the vocabularies."""
 
     layer = INTEGRATION_TESTING
 

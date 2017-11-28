@@ -1,15 +1,11 @@
 # -*- coding: utf-8 -*-
 """Theming extensions for Plone Websites."""
 
-# python imports
-import logging
-
-# zope imports
 from plone import api as ploneapi
+from spirit.plone.theming import config
 from zope.i18nmessageid import MessageFactory
 
-# local imports
-from spirit.plone.theming import config
+import logging
 
 
 PLONE_4 = '4' <= ploneapi.env.plone_version() < '5'

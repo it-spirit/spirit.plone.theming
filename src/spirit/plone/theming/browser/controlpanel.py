@@ -1,23 +1,16 @@
 # -*- coding: utf-8 -*-
 """Plone Theming Settings Control Panel."""
 
-# zope imports
 from plone.app.registry.browser import controlpanel
 from plone.formwidget.namedfile.widget import NamedImageFieldWidget
 from plone.registry.interfaces import IRegistry
+from spirit.plone.theming import _
+from spirit.plone.theming import PLONE_4
+from spirit.plone.theming.interfaces import IPloneThemeSettings
+from spirit.plone.theming.interfaces import IPloneThemeSettingsEditForm
 from z3c.form import field
 from zope.component import getUtility
 from zope.interface import implementer
-
-# local imports
-from spirit.plone.theming import (
-    _,
-    PLONE_4,
-)
-from spirit.plone.theming.interfaces import (
-    IPloneThemeSettings,
-    IPloneThemeSettingsEditForm,
-)
 
 
 class SelfHealingRegistryEditForm(controlpanel.RegistryEditForm):

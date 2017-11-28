@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 """Viewlets for spirit.plone.theming."""
 
-# python imports
-import datetime
-import pkg_resources
-
-# zope imports
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api as ploneapi
 from plone.api.exc import InvalidParameterError
-from plone.app.layout.viewlets.common import (
-    LogoViewlet as LogoViewletPlone,
-    ViewletBase,
-)
+from plone.app.layout.viewlets.common import LogoViewlet as LogoViewletPlone
+from plone.app.layout.viewlets.common import ViewletBase
 from plone.memoize import view
-
-# local imports
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from spirit.plone.theming import utils
 from spirit.plone.theming.interfaces import IPloneThemeSettings
+
+import datetime
+import pkg_resources
 
 
 class DiazoSnippetViewlet(ViewletBase):

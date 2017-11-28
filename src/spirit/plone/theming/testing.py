@@ -1,22 +1,18 @@
 # -*- coding: utf-8 -*-
 """Test Layer for spirit.plone.theming."""
 
-# zope imports
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
-from plone.app.testing import (
-    FunctionalTesting,
-    IntegrationTesting,
-    PloneSandboxLayer,
-    PLONE_FIXTURE,
-)
-from plone.testing import (
-    Layer,
-    z2,
-)
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
+from plone.app.testing import PloneSandboxLayer
+from plone.testing import Layer
+from plone.testing import z2
 
 
 class Fixture(PloneSandboxLayer):
     """Custom Test Layer for spirit.plone.theming."""
+
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):

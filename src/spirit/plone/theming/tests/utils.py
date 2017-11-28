@@ -1,20 +1,15 @@
 # -*- coding: utf-8 -*-
 """Utilities for setting up test content."""
 
-# python imports
-from datetime import (
-    datetime,
-    timedelta,
-)
+from DateTime import DateTime
+from datetime import datetime
+from datetime import timedelta
+from plone import api
+from spirit.plone.theming import logger
 from tzlocal import get_localzone
+
 import pkg_resources
 
-# zope imports
-from DateTime import DateTime
-from plone import api
-
-# local imports
-from spirit.plone.theming import logger
 
 TZNAME = get_localzone().zone
 DUMMY_TEXT_SHORT = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
@@ -113,7 +108,6 @@ def create_event_items(portal):
 
 def create_news_items(portal):
     """Create sample news items."""
-
     news = portal.get('news')
     if not news:
         news = api.content.create(

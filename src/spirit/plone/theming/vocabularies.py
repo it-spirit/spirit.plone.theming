@@ -1,25 +1,22 @@
 # -*- coding: utf-8 -*-
 """Vocabularies used by spirit.plone.theming."""
 
-# zope imports
 from plone import api as ploneapi
 from plone.api.exc import InvalidParameterError
 from plone.registry.interfaces import IRegistry
+from spirit.plone.theming import _
+from spirit.plone.theming.interfaces import IPloneThemingVocabularies
 from zope.component import getUtility
 from zope.globalrequest import getRequest
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
-from zope.schema.vocabulary import (
-    SimpleTerm,
-    SimpleVocabulary,
-)
-
-# local imports
-from spirit.plone.theming import _
-from spirit.plone.theming.interfaces import IPloneThemingVocabularies
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 class BaseVocabulary(object):
+    """A base vocabulary class."""
+
     def _get_registry_record(self, name=None):
         try:
             return ploneapi.portal.get_registry_record(
@@ -48,6 +45,7 @@ class BaseVocabulary(object):
 
 @implementer(IVocabularyFactory)
 class AvailableHeaderOptionsVocabulary(BaseVocabulary):
+    """Vocabulary for available header options."""
 
     def __call__(self, context):
 
@@ -59,6 +57,7 @@ class AvailableHeaderOptionsVocabulary(BaseVocabulary):
 
 @implementer(IVocabularyFactory)
 class AvailableFooterOptionsVocabulary(BaseVocabulary):
+    """Vocabulary for available footer options."""
 
     def __call__(self, context):
 
@@ -70,6 +69,7 @@ class AvailableFooterOptionsVocabulary(BaseVocabulary):
 
 @implementer(IVocabularyFactory)
 class AvailableColorOptionsVocabulary(BaseVocabulary):
+    """Vocabulary for available color options."""
 
     def __call__(self, context):
 
@@ -81,6 +81,7 @@ class AvailableColorOptionsVocabulary(BaseVocabulary):
 
 @implementer(IVocabularyFactory)
 class AvailablePatternOptionsVocabulary(BaseVocabulary):
+    """Vocabulary for available pattern options."""
 
     def __call__(self, context):
 
@@ -92,6 +93,7 @@ class AvailablePatternOptionsVocabulary(BaseVocabulary):
 
 @implementer(IVocabularyFactory)
 class AvailableLayoutOptionsVocabulary(BaseVocabulary):
+    """Vocabulary for available layout options."""
 
     def __call__(self, context):
 

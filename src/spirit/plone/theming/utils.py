@@ -1,13 +1,10 @@
 """Theming utils."""
 # -*- coding: utf-8 -*-
 
-# zope imports
 from plone import api
 from plone.registry.interfaces import IRegistry
-from zope.component import getUtility
-
-# local imports
 from spirit.plone.theming import PLONE_4
+from zope.component import getUtility
 
 
 def get_site_favicon(site=None):

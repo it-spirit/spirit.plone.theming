@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 """Test Setup of spirit.plone.theming."""
 
-# python imports
+from plone import api
+from plone.browserlayer.utils import registered_layers
+from spirit.plone.theming.config import PROJECT_NAME
+from spirit.plone.theming.testing import INTEGRATION_TESTING
+
+
 try:
     import unittest2 as unittest
 except ImportError:
     import unittest
-
-# zope imports
-from plone import api
-from plone.browserlayer.utils import registered_layers
-
-# local imports
-from spirit.plone.theming.config import PROJECT_NAME
-from spirit.plone.theming.testing import INTEGRATION_TESTING
 
 
 class TestSetup(unittest.TestCase):
@@ -37,6 +34,7 @@ class TestSetup(unittest.TestCase):
 
 
 class UninstallTestCase(unittest.TestCase):
+    """Validate uninstall process for spirit.plone.theming."""
 
     layer = INTEGRATION_TESTING
 

@@ -1,24 +1,22 @@
 # -*- coding: utf-8 -*-
 """Test UI with robot framework."""
 
-# python imports
+from plone import api
+from plone.testing import layered
+from spirit.plone.theming import testing
+
 import os
 import robotsuite
+
+
 try:
     import unittest2 as unittest
 except ImportError:
     import unittest
 
 
-# zope imports
-from plone import api
-from plone.testing import layered
-
-# local imports
-from spirit.plone.theming import testing
-
-
 def test_suite():
+    """Create a test suite for robot tests."""
     suite = unittest.TestSuite()
     no_robot = 'NO_ROBOT' in os.environ.keys()
     if no_robot or api.env.plone_version() < '4.2':
