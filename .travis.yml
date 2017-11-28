@@ -18,7 +18,7 @@ addons:
 install:
   - sed -ie "s#test-4.x.cfg#test-$PLONE_VERSION.x.cfg#" travis.cfg
   - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
-  - pip install -U zc.buildout
+  - pip install -r requirements.txt
   - buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
   - buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True
 before_script:
