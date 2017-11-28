@@ -226,26 +226,6 @@ Hide Search Box
   <drop css:theme=".site-search" css:if-content="#PLONE_THEMING_HIDE_SEARCHBOX" />
 
 
-Slideshow Fullscreen Mode
-"""""""""""""""""""""""""
-
-.. code-block:: xml
-
-    <rules css:if-content="#PLONE_THEMING_SLIDESHOW_FULLSCREEN">
-      <replace css:theme-children="#slideshow_fs">
-        <xsl:for-each css:select=".carousel">
-          <div class="row">
-            <div><xsl:copy-of select="attribute::*" />
-              <xsl:apply-templates />
-            </div>
-          </div>
-        </xsl:for-each>
-      </replace>
-      <drop css:content=".carousel" />
-    </rules>
-    <drop css:theme="#slideshow_fs" css:if-not-content="#PLONE_THEMING_SLIDESHOW_FULLSCREEN" />
-
-
 Custom Footer Text
 """"""""""""""""""
 

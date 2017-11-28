@@ -302,31 +302,6 @@ Diazo example::
     <drop css:theme=".site-search" css:if-content="#PLONE_THEMING_HIDE_SEARCHBOX" />
 
 
-Slideshow Fullscreen Mode
--------------------------
-
-If enabled, a slideshow (if available) will be rendered in fullscreen mode.
-Depending on the theme, this might be above the main menu or as header background.
-If disabled, the slideshow is visible within the content area.
-The slideshow fullscreen mode will be available as content with the CSS id ``PLONE_THEMING_SLIDESHOW_FULLSCREEN`` if enabled.
-
-Diazo example::
-
-    <rules css:if-content="#PLONE_THEMING_SLIDESHOW_FULLSCREEN">
-      <replace css:theme-children="#slideshow_fs">
-        <xsl:for-each css:select=".carousel">
-          <div class="row">
-            <div><xsl:copy-of select="attribute::*" />
-              <xsl:apply-templates />
-            </div>
-          </div>
-        </xsl:for-each>
-      </replace>
-      <drop css:content=".carousel" />
-    </rules>
-    <drop css:theme="#slideshow_fs" css:if-not-content="#PLONE_THEMING_SLIDESHOW_FULLSCREEN" />
-
-
 Custom Footer Text
 ------------------
 

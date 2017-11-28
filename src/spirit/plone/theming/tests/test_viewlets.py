@@ -319,33 +319,6 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         except AttributeError:
             self.assertTrue('PLONE_THEMING_HIDE_SEARCHBOX' in rendered)
 
-    def test_diazo_snippet_slideshow_fullscreen(self):
-        """Validate the 'slideshow_fullscreen' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
-        dsv.update()
-        rendered = dsv.render()
-        self.assertFalse(dsv.slideshow_fullscreen)
-        try:
-            self.assertNotIn('PLONE_THEMING_SLIDESHOW_FULLSCREEN', rendered)
-        except AttributeError:
-            self.assertFalse('PLONE_THEMING_SLIDESHOW_FULLSCREEN' in rendered)
-
-    def test_diazo_snippet_slideshow_fullscreen_set(self):
-        """Validate the 'slideshow_fullscreen' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
-        dsv.update()
-        ploneapi.portal.set_registry_record(
-            name='slideshow_fullscreen',
-            value=True,
-            interface=IPloneThemeSettings,
-        )
-        rendered = dsv.render()
-        self.assertTrue(dsv.slideshow_fullscreen)
-        try:
-            self.assertIn('PLONE_THEMING_SLIDESHOW_FULLSCREEN', rendered)
-        except AttributeError:
-            self.assertTrue('PLONE_THEMING_SLIDESHOW_FULLSCREEN' in rendered)
-
     def test_diazo_snippet_footer_text(self):
         """Validate the 'footer_text' attribute."""
         dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)

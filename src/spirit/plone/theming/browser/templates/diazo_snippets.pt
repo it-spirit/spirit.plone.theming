@@ -124,14 +124,6 @@
         tal:attributes="data-plonetheming-value item">
     </section>
 
-    <section id="PLONE_THEMING_SLIDESHOW_FULLSCREEN" data-plonetheming-value=""
-        tal:define="item view/slideshow_fullscreen | nothing"
-        tal:condition="item"
-        i18n:translate=""
-        tal:attributes="data-plonetheming-value item">
-      <p>Fullscreen Slideshow Enabled</p>
-    </section>
-
     <section id="PLONE_THEMING_SLOGAN"
         tal:define="item view/slogan | nothing"
         tal:condition="item"

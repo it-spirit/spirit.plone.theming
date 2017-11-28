@@ -146,20 +146,6 @@ class IPloneThemeSettings(form.Schema):
         title=_(u'Hide Search Box'),
     )
 
-    slideshow_fullscreen = schema.Bool(
-        description=_(
-            u'If enabled, a slideshow (if available) will be rendered in '
-            u'fullscreen mode. Depending on the theme, this might be above '
-            u'the main menu or as header background. If disabled, the '
-            u'slideshow is visible within the content area.'
-            u'The slideshow fullscreen mode will be available as content '
-            u'with the CSS id <em>PLONE_THEMING_SLIDESHOW_FULLSCREEN</em> '
-            u'if enabled.'
-        ),
-        required=False,
-        title=_(u'Slideshow Fullscreen Mode'),
-    )
-
     footer_text = schema.Text(
         description=_(
             u'Add your custom footer text (HTML is supported). '

@@ -145,17 +145,6 @@ If enabled, the search box (available in the header part) will be removed in the
 The searchbox option will be available as content with the CSS id ``PLONE_THEMING_HIDE_SEARCHBOX`` if enabled.
 
 
-Slideshow Fullscreen Mode
-"""""""""""""""""""""""""
-
-.. image:: ../_images/settings-slideshow_fullscreen.png
-
-If enabled, a slideshow (if available) will be rendered in fullscreen mode.
-Depending on the theme, this might be above the main menu or as header background.
-If disabled, the slideshow is visible within the content area.
-The slideshow fullscreen mode will be available as content with the CSS id ``PLONE_THEMING_SLIDESHOW_FULLSCREEN`` if enabled.
-
-
 Custom Footer Text
 """"""""""""""""""
 

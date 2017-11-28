@@ -5,43 +5,53 @@ Changelog
 0.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Remove 'slideshow_fullscreen' option.
+  [tmassman]
 
 
 0.6 (2017-10-13)
 ----------------
 
 - Add snippets to show availability of theming addons.
+  [tmassman]
 
 
 0.5 (2017-05-18)
 ----------------
 
 - Instead of providing a diazo snippet for the logo, provide a custom logo viewlet.
+  [tmassman]
 
 
 0.4 (2017-05-18)
 ----------------
 
 - Load collective.monkeypatcher, if available, to prevent ConfigurationError.
+  [tmassman]
 - Add ``site_logo`` option to upload a custom site logo (Plone 4 only).
+  [tmassman]
 
 
 0.3 (2017-01-24)
 ----------------
 
 - Add option to hide footer and colophon texts completely.
+  [tmassman]
 - Update installation docs and documentation images.
+  [tmassman]
 
 
 0.2 (2017-01-12)
 ----------------
 
 - Add ``site_favicon`` option to upload a custom favicon.
+  [tmassman]
 - Update documentation.
+  [tmassman]
 
 
 0.1 (2016-12-20)
 ----------------
 
 - Initial release.
+  [tmassman]

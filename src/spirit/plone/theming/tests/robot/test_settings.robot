@@ -72,11 +72,6 @@ Show how to change the settings
     ...  settings-hide_searchbox.png
     ...  id=formfield-form-widgets-hide_searchbox
 
-    Page should contain element  id=formfield-form-widgets-slideshow_fullscreen
-    Capture and crop page screenshot
-    ...  settings-slideshow_fullscreen.png
-    ...  id=formfield-form-widgets-slideshow_fullscreen
-
     Page should contain element  id=formfield-form-widgets-footer_text
     Capture and crop page screenshot
     ...  settings-footer_text.png

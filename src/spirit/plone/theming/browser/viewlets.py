@@ -117,11 +117,6 @@ class DiazoSnippetViewlet(ViewletBase):
 
     @property
     @view.memoize_contextless
-    def slideshow_fullscreen(self):
-        return self._get_registry_record(name='slideshow_fullscreen')
-
-    @property
-    @view.memoize_contextless
     def hide_searchbox(self):
         return self._get_registry_record(name='hide_searchbox')
 
