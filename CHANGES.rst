@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.7 (unreleased)
+0.7 (2017-11-30)
 ----------------
 
 - Remove 'slideshow_fullscreen' option.
