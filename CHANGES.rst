@@ -5,7 +5,7 @@ Changelog
 0.8 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Phone numbers starting with a '+' are getting a '00' country code prefix.
 
 
 0.7 (2017-11-30)

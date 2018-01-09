@@ -51,3 +51,12 @@ def get_site_logo(site=None):
         return '{0}/@@site-logo-plone4/{1}'.format(site_url, filename)
     else:
         return '{0}/logo.png'.format(site_url)
+
+
+def get_raw_phone_number(phone):
+    """Return the raw (digits only) phone number."""
+    if not phone:
+        return
+    if phone.startswith('+'):
+        phone = phone.replace('+', '00')
+    return ''.join(i for i in phone if i.isdigit())

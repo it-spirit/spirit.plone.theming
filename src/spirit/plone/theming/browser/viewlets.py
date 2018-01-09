@@ -105,9 +105,7 @@ class DiazoSnippetViewlet(ViewletBase):
     @view.memoize_contextless
     def phone_number_raw(self):
         raw = self._get_registry_record(name='phone_number')
-        if not raw:
-            return
-        return ''.join(i for i in raw if i.isdigit())
+        return utils.get_raw_phone_number(raw)
 
     @property
     @view.memoize_contextless

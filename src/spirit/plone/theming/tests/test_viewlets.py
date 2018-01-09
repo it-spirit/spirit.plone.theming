@@ -268,7 +268,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             interface=IPloneThemeSettings,
         )
         self.assertEqual(dsv.phone_number, u'+1 (234) 567-890')
-        self.assertEqual(dsv.phone_number_raw, u'1234567890')
+        self.assertEqual(dsv.phone_number_raw, u'001234567890')
 
     def test_diazo_snippet_email(self):
         """Validate the 'email' attribute."""
