@@ -7,7 +7,7 @@
       tal:omit-tag="">
   <div id="spirit_plone_theming_diazo_snippets" style="display: none;"
       tal:attributes="style string:display: ${view/debug_style}">
-    <h1 i18n:translate="">Diazo Snippets</h1>
+    <h2 i18n:translate="">Diazo Snippets</h2>
 
     <section id="PLONE_THEMING_DEBUG" data-plonetheming-value=""
         tal:define="item view/debug | nothing"
