@@ -6,6 +6,9 @@ Changelog
 ----------------
 
 - Phone numbers starting with a '+' are getting a '00' country code prefix.
+  [tmassman]
+- Replace deprecated plone.directives.form with plone.supermodel to remove grok dependencies.
+  [tmassman]
 
 
 0.7 (2017-11-30)

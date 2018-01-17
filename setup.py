@@ -23,8 +23,8 @@ install_requires = [
     'collective.themesitesetup',
     'plone.api',
     'plone.app.registry',
-    'plone.directives.form',
     'plone.formwidget.namedfile',
+    'plone.supermodel',
     'tzlocal',
 ]
 

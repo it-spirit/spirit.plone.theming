@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
-from plone.directives import form
+from plone.supermodel import model
 from spirit.plone.theming import _
 from spirit.plone.theming import PLONE_4
 from zope import schema
@@ -17,7 +17,7 @@ class IPloneThemeSettingsEditForm(Interface):
     """Marker interface for the Theme Settings Form."""
 
 
-class IPloneThemeSettings(form.Schema):
+class IPloneThemeSettings(model.Schema):
     """Plone Theming Settings.
 
     This describes records stored in the configuration registry and obtainable
@@ -197,7 +197,7 @@ class IPloneThemeSettings(form.Schema):
     )
 
 
-class IPloneThemingVocabularies(form.Schema):
+class IPloneThemingVocabularies(model.Schema):
     """Plone Theming Vocabularies."""
 
     available_header_options = schema.Set(
