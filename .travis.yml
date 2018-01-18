@@ -17,7 +17,6 @@ addons:
   firefox: 45.8.0esr
 before_install:
   - pip uninstall -y six
-  - pip list
 install:
   - sed -ie "s#test-4.x.cfg#test-$PLONE_VERSION.x.cfg#" travis.cfg
   - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
