@@ -17,14 +17,16 @@ addons:
   firefox: 45.8.0esr
 before_install:
   - pip uninstall -y six
+  - deactivate
+  - virtualenv --system-site-packages ~/virtualenv/pipenv
+  - source ~/virtualenv/pipenv/bin/activate
+  - pip install pipenv
 install:
   - sed -ie "s#test-4.x.cfg#test-$PLONE_VERSION.x.cfg#" travis.cfg
   - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
-  - deactivate
-  - pip install pipenv
-  - pipenv install --dev
-  - pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
-  - pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True
+  - ~/virtualenv/pipenv/bin/pipenv install --dev
+  - ~/virtualenv/pipenv/bin/pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
+  - ~/virtualenv/pipenv/bin/pipenv run buildout -c travis.cfg -N buildout:download-cache=downloads code-analysis:return-status-codes=True
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
