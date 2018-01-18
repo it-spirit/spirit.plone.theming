@@ -28,7 +28,7 @@ class SelfHealingRegistryEditForm(controlpanel.RegistryEditForm):
             self.fields = field.Fields()
             registry.registerInterface(self.schema)
             self.status = _(
-                u'Registry has been updated. Please reload this page.'
+                u'Registry has been updated. Please reload this page.',
             )
             return None
 
@@ -41,7 +41,7 @@ class PloneThemeSettingsEditForm(SelfHealingRegistryEditForm):
     label = _(u'Plone Theming Settings')
     description = _(
         u'Settings that can be used by Diazo themes. Please note that not '
-        u'every theme supports all possible options.'
+        u'every theme supports all possible options.',
     )
 
     def updateFields(self):

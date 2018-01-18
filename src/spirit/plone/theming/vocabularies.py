@@ -36,7 +36,7 @@ class BaseVocabulary(object):
             except (KeyError, InvalidParameterError):
                 ploneapi.portal.show_message(
                     message=_(
-                        u'Please upgrade or reinstall spirit.plone.theming'
+                        u'Please upgrade or reinstall spirit.plone.theming',
                     ),
                     request=getRequest(),
                 )

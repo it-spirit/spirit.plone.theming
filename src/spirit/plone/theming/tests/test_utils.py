@@ -23,17 +23,17 @@ class UtilitiesTestCase(unittest.TestCase):
         """Validate the 'get_raw_phone_number' function."""
         self.assertEqual(
             utils.get_raw_phone_number(u'1234567890'),
-            u'1234567890'
+            u'1234567890',
         )
         self.assertEqual(
             utils.get_raw_phone_number(u'1-234-567-890'),
-            u'1234567890'
+            u'1234567890',
         )
         self.assertEqual(
             utils.get_raw_phone_number(u'+1-234-567-890'),
-            u'001234567890'
+            u'001234567890',
         )
         self.assertEqual(
             utils.get_raw_phone_number(u'+1-(234)-567-890'),
-            u'001234567890'
+            u'001234567890',
         )
