@@ -21,6 +21,7 @@ before_install:
   - virtualenv --system-site-packages ~/virtualenv/pipenv
   - source ~/virtualenv/pipenv/bin/activate
   - pip install pipenv
+  - deactivate
 install:
   - sed -ie "s#test-4.x.cfg#test-$PLONE_VERSION.x.cfg#" travis.cfg
   - sed -ie "s#versions-$PLONE_VERSION.x#versions#" travis.cfg
