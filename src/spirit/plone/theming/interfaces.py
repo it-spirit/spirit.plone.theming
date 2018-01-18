@@ -28,7 +28,7 @@ class IPloneThemeSettings(model.Schema):
         description=_(
             u'If enabled, the content of the diazo snippets will be '
             u'visible to the user. If disabled, the content is hidden '
-            u'with CSS.'
+            u'with CSS.',
         ),
         required=False,
         title=_(u'Enable Debug Mode'),
@@ -50,7 +50,7 @@ class IPloneThemeSettings(model.Schema):
     header_option = schema.Choice(
         description=_(
             u'Select the header variant which should be used for the current '
-            u'theme.'
+            u'theme.',
         ),
         required=False,
         title=_(u'Header Option'),
@@ -60,7 +60,7 @@ class IPloneThemeSettings(model.Schema):
     footer_option = schema.Choice(
         description=_(
             u'Select the footer variant which should be used for the current '
-            u'theme.'
+            u'theme.',
         ),
         required=False,
         title=_(u'Footer Option'),
@@ -70,7 +70,7 @@ class IPloneThemeSettings(model.Schema):
     color_option = schema.Choice(
         description=_(
             u'Select the color variant which should be used for the current '
-            u'theme.'
+            u'theme.',
         ),
         required=False,
         title=_(u'Color Option'),
@@ -80,7 +80,7 @@ class IPloneThemeSettings(model.Schema):
     pattern_option = schema.Choice(
         description=_(
             u'Select the background pattern which should be used for the '
-            u'current theme.'
+            u'current theme.',
         ),
         required=False,
         title=_(u'Pattern Option'),
@@ -90,7 +90,7 @@ class IPloneThemeSettings(model.Schema):
     layout_option = schema.Choice(
         description=_(
             u'Select the layout variant which should be used for the current '
-            u'theme.'
+            u'theme.',
         ),
         required=False,
         title=_(u'Layout Option'),
@@ -101,10 +101,10 @@ class IPloneThemeSettings(model.Schema):
         description=_(
             u'Add a slogan for your website (HTML is supported). '
             u'The slogan will be available as content with the CSS id '
-            u'<em>PLONE_THEMING_SLOGAN</em>.'
+            u'<em>PLONE_THEMING_SLOGAN</em>.',
         ),
         required=False,
-        title=_(u'Slogan')
+        title=_(u'Slogan'),
     )
 
     phone_number = schema.TextLine(
@@ -113,7 +113,7 @@ class IPloneThemeSettings(model.Schema):
             u'The phone number will be available as content with the CSS id '
             u'<em>PLONE_THEMING_PHONE_NUMBER</em> and '
             u'<em>PLONE_THEMING_PHONE_NUMBER_RAW</em> (all non-number '
-            u'characters removed).'
+            u'characters removed).',
         ),
         required=False,
         title=_(u'Phone number'),
@@ -123,7 +123,7 @@ class IPloneThemeSettings(model.Schema):
         description=_(
             u'Add a valid email address. '
             u'The email address will be available as content with the CSS id '
-            u'<em>PLONE_THEMING_EMAIL</em>.'
+            u'<em>PLONE_THEMING_EMAIL</em>.',
         ),
         required=False,
         title=_(u'E-Mail Address'),
@@ -135,7 +135,7 @@ class IPloneThemeSettings(model.Schema):
             u'will be removed in the theme.'
             u'The searchbox option will be available as content '
             u'with the CSS id <em>PLONE_THEMING_HIDE_SEARCHBOX</em> '
-            u'if enabled.'
+            u'if enabled.',
         ),
         required=False,
         title=_(u'Hide Search Box'),
@@ -150,7 +150,7 @@ class IPloneThemeSettings(model.Schema):
             u'<em>{portal_url}</em>, '
             u'<em>{year}</em>. '
             u'Example: <code>&lt;p&gt;&amp;copy; Copyright 2009-{year} '
-            u'Your Company Name&lt;/p&gt;</code>.'
+            u'Your Company Name&lt;/p&gt;</code>.',
         ),
         required=False,
         title=_(u'Custom Footer Text'),
@@ -162,7 +162,7 @@ class IPloneThemeSettings(model.Schema):
             u'will be removed in the theme.'
             u'The footer option will be available as content '
             u'with the CSS id <em>PLONE_THEMING_HIDE_FOOTER</em> '
-            u'if enabled.'
+            u'if enabled.',
         ),
         required=False,
         title=_(u'Hide Footer Text'),
@@ -178,7 +178,7 @@ class IPloneThemeSettings(model.Schema):
             u'<em>{year}</em>. '
             u'Example: <code>&lt;p&gt;Powered by Plone, Python &amp; &lt;a '
             u'href="{portal_url}"&gt;Your Company Name&lt;/a&gt;&lt;/p&gt;'
-            u'</code>.'
+            u'</code>.',
         ),
         required=False,
         title=_(u'Custom Colophon Text'),
@@ -190,7 +190,7 @@ class IPloneThemeSettings(model.Schema):
             u'will be removed in the theme.'
             u'The colophon option will be available as content '
             u'with the CSS id <em>PLONE_THEMING_HIDE_COLOPHON</em> '
-            u'if enabled.'
+            u'if enabled.',
         ),
         required=False,
         title=_(u'Hide Colophon Text'),
