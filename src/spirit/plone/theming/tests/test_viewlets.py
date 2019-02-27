@@ -178,8 +178,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_color_options',
-            value=set(['blue',
-                       'green']),
+            value=set(['blue', 'green']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
@@ -201,9 +200,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_pattern_options',
-            value=set(['pat1',
-                       'pat2',
-                       'pat3']),
+            value=set(['pat1', 'pat2', 'pat3']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
@@ -225,8 +222,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_layout_options',
-            value=set(['boxed',
-                       'wide']),
+            value=set(['boxed', 'wide']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
