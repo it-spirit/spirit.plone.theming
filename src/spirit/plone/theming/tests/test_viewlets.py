@@ -385,7 +385,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
             interface=IPloneThemeSettings,
         )
         output = dsv.colophon_text
-        url = u'http://localhost:55001/plone'
+        url = self.portal.absolute_url()
         try:
             self.assertIn('Powered by Plone, Python', output)
             self.assertIn(url, output)
