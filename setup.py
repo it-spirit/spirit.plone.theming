@@ -60,11 +60,13 @@ setup(
     zip_safe=False,
     extras_require=dict(
         test=[
+            'plone.app.contenttypes',
             'plone.app.layout[test]',
             'plone.app.robotframework[debug]',
             'plone.app.testing',
             'plone.app.textfield',
             'plone.namedfile',
+            'plone.testing>=5.0.0',
             'robotframework-selenium2screenshots',
         ],
     ),
