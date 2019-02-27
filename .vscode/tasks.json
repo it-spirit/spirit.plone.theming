@@ -13,13 +13,19 @@
       }
     },
     {
-      "label": "Plone: test",
+      "label": "Plone: tests",
       "type": "shell",
       "command": "bin/test",
       "group": {
         "kind": "test",
         "isDefault": true
       }
+    },
+    {
+      "label": "Plone: all tests",
+      "type": "shell",
+      "command": "bin/test --all",
+      "group": "test"
     }
   ]
 }
