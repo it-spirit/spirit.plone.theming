@@ -7,7 +7,6 @@ cache:
 python:
   - 2.7
 env:
-  - PLONE_VERSION=4.2
   - PLONE_VERSION=4.3
   - PLONE_VERSION=5.0
   - PLONE_VERSION=5.1
