@@ -1,4 +1,7 @@
 {
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/parts/omelette"
+  ],
   "python.formatting.provider": "yapf",
   "python.formatting.yapfPath": "${workspaceFolder}/.venv/bin/yapf",
   "python.linting.flake8Path": "${workspaceFolder}/bin/flake8",
