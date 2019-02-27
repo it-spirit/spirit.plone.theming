@@ -5,7 +5,8 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Drop Plone 4.2.x compatibility.
+  [tmassman]
 
 
 0.8 (2018-01-17)
