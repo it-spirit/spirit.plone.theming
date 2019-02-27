@@ -53,7 +53,7 @@ before_script:
   - sleep 3
 script:
   - python --version 2> /dev/stdout | grep 3.6 || bin/code-analysis
-  - bin/test
+  - bin/test --all
 after_success:
   - bin/createcoverage
   - pip install coveralls
