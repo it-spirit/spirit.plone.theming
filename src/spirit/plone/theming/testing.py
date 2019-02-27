@@ -29,6 +29,20 @@ class Fixture(PloneSandboxLayer):
         """Set up a Plone site for testing."""
         applyProfile(portal, 'spirit.plone.theming:default')
         portal.portal_workflow.setDefaultChain('simple_publication_workflow')
+        if 'Members' not in portal:
+            self.add_members_folder(portal)
+
+    def add_members_folder(self, portal):
+        from Products.CMFPlone.utils import _createObjectByType
+        from plone.app.testing import TEST_USER_ID
+
+        _createObjectByType('Folder', portal, id='Members')
+        mtool = portal.portal_membership
+        if not mtool.getMemberareaCreationFlag():
+            mtool.setMemberareaCreationFlag()
+        mtool.createMemberArea(TEST_USER_ID)
+        if mtool.getMemberareaCreationFlag():
+            mtool.setMemberareaCreationFlag()
 
 
 FIXTURE = Fixture()

@@ -8,6 +8,11 @@ from spirit.plone.theming.testing import INTEGRATION_TESTING
 
 import unittest
 
+try:
+    from Products.CMFPlone.utils import get_installer
+except ImportError:
+    get_installer = None
+
 
 class TestSetup(unittest.TestCase):
     """Validate setup process for spirit.plone.theming."""
@@ -17,11 +22,18 @@ class TestSetup(unittest.TestCase):
     def setUp(self):
         """Additional test setup."""
         self.portal = self.layer['portal']
+        if get_installer is not None:
+            self.installer = get_installer(self.portal)
+        else:
+            self.installer = self.portal.portal_quickinstaller
 
     def test_product_is_installed(self):
         """Validate that our product is installed."""
-        qi = self.portal.portal_quickinstaller
-        self.assertTrue(qi.isProductInstalled(PROJECT_NAME))
+        try:
+            result = self.installer.is_product_installed(PROJECT_NAME)
+        except AttributeError:
+            result = self.installer.isProductInstalled(PROJECT_NAME)
+        self.assertTrue(result)
 
     def test_addon_layer(self):
         """Validate that the browserlayer for our product is installed."""
@@ -38,14 +50,24 @@ class UninstallTestCase(unittest.TestCase):
         """Additional test setup."""
         self.portal = self.layer['portal']
 
-        qi = self.portal.portal_quickinstaller
+        if get_installer is not None:
+            self.installer = get_installer(self.portal)
+        else:
+            self.installer = self.portal.portal_quickinstaller
+
         with api.env.adopt_roles(['Manager']):
-            qi.uninstallProducts(products=[PROJECT_NAME])
+            try:
+                self.installer.uninstall_product(PROJECT_NAME)
+            except AttributeError:
+                self.installer.uninstallProducts(products=[PROJECT_NAME])
 
     def test_product_is_uninstalled(self):
         """Validate that our product is uninstalled."""
-        qi = self.portal.portal_quickinstaller
-        self.assertFalse(qi.isProductInstalled(PROJECT_NAME))
+        try:
+            result = self.installer.is_product_installed(PROJECT_NAME)
+        except AttributeError:
+            result = self.installer.isProductInstalled(PROJECT_NAME)
+        self.assertFalse(result)
 
     def test_addon_layer_removed(self):
         """Validate that the browserlayer is removed."""
