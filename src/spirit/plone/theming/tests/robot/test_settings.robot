@@ -2,15 +2,15 @@
 
 Resource  keywords.robot
 
-Suite Setup  Setup
-Suite Teardown  Teardown
+Test Setup  Open test browser
+Test Teardown  Close all browsers
 
 
 *** Test cases ***
 
 Show how to change the settings
-    Enable autologin as  Manager
-    Go to  ${PLONE_URL}/@@plone-theming-settings
+    Given a logged-in manager
+    and the theming controlpanel
 
     Page should contain element  id=form
     Capture and crop page screenshot
@@ -91,3 +91,9 @@ Show how to change the settings
     Capture and crop page screenshot
     ...  settings-hide_colophon.png
     ...  id=formfield-form-widgets-hide_colophon
+
+
+*** Keywords ***
+
+the theming control panel
+  Go to  ${PLONE_URL}/@@plone-theming-settings

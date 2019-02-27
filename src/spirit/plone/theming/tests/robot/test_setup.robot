@@ -2,15 +2,15 @@
 
 Resource  keywords.robot
 
-Suite Setup  Setup
-Suite Teardown  Teardown
+Test Setup  Open test browser
+Test Teardown  Close all browsers
 
 
 *** Test cases ***
 
 Show how to activate the add-on
-    Enable autologin as  Manager
-    Go to  ${PLONE_URL}/prefs_install_products_form
+    Given a logged-in manager
+    and the addons controlpanel
 
     Page should contain element  xpath=//*[@value='spirit.plone.theming']
     Assign id to element
@@ -40,3 +40,9 @@ Show how to activate the add-on
     Capture and crop page screenshot
     ...  setup_select_add_on_installable.png
     ...  id=addons-enabled
+
+
+*** Keywords ***
+
+the addons control panel
+  Go to  ${PLONE_URL}/prefs_install_products_form
