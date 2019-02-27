@@ -7,6 +7,7 @@ from plone.registry.interfaces import IRegistry
 from spirit.plone.theming.browser.viewlets import DiazoSnippetViewlet
 from spirit.plone.theming.interfaces import IPloneThemeSettings
 from spirit.plone.theming.interfaces import IPloneThemingVocabularies
+from spirit.plone.theming.testing import FUNCTIONAL_TESTING
 from zope.component import getUtility
 
 # Red pixel with filename pixel.png
@@ -18,9 +19,7 @@ SITE_FAVICON_B64 = 'filenameb64:cGl4ZWwucG5n;datab64:iVBORw0KGgoAAAANSUhEUgAA'\
 class TestDiazoSnippetsViewlet(ViewletsTestCase):
     """Validate the diazo snippets viewlet."""
 
-    if ploneapi.env.plone_version()[:1] >= '5':
-        from spirit.plone.theming.testing import INTEGRATION_TESTING
-        layer = INTEGRATION_TESTING
+    layer = FUNCTIONAL_TESTING
 
     def afterSetUp(self):
         registry = getUtility(IRegistry)
