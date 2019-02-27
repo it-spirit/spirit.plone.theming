@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test Layer for spirit.plone.theming."""
 
+from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
@@ -8,16 +9,11 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
-try:
-    from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE as BASE_FIXTURE  # noqa: N501
-except ImportError:
-    from plone.app.testing import PLONE_FIXTURE as BASE_FIXTURE
-
 
 class Fixture(PloneSandboxLayer):
     """Custom Test Layer for spirit.plone.theming."""
 
-    defaultBases = (BASE_FIXTURE, )
+    defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE, )
 
     def setUpZope(self, app, configurationContext):
         """Set up Zope for testing."""
