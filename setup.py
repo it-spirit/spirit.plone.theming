@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """Setup for spirit.plone.theming package."""
 
-from setuptools import (
-    find_packages,
-    setup,
-)
+from setuptools import find_packages
+from setuptools import setup
 
 version = '0.9.dev0'
-description = "Theming extensions for Plone Websites."
+description = 'Theming extensions for Plone Websites.'
 long_description = ('\n'.join([
     open('README.rst').read(),
     'Contributors',
@@ -36,16 +34,16 @@ setup(
     # Get more strings from
     # http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Framework :: Plone :: 4.3",
-        "Framework :: Plone :: 5.0",
-        "Framework :: Plone :: 5.1",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Framework :: Plone',
+        'Framework :: Plone :: 4.3',
+        'Framework :: Plone :: 5.0',
+        'Framework :: Plone :: 5.1',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
     ],
     keywords='plone zope theming',
     author='it-spirit',
