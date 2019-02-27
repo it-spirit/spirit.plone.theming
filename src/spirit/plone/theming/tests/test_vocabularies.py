@@ -7,10 +7,7 @@ from spirit.plone.theming.testing import INTEGRATION_TESTING
 from zope.component import queryUtility
 from zope.schema.interfaces import IVocabularyFactory
 
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+import unittest
 
 
 class VocabulariesTestCase(unittest.TestCase):
