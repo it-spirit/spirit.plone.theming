@@ -2,13 +2,12 @@
 """Test spirit.plone.theming viewlets."""
 
 from plone import api as ploneapi
-from plone.app.layout.viewlets.tests.base import ViewletsTestCase
-from plone.registry.interfaces import IRegistry
 from spirit.plone.theming.browser.viewlets import DiazoSnippetViewlet
 from spirit.plone.theming.interfaces import IPloneThemeSettings
 from spirit.plone.theming.interfaces import IPloneThemingVocabularies
 from spirit.plone.theming.testing import FUNCTIONAL_TESTING
-from zope.component import getUtility
+
+import unittest
 
 # Red pixel with filename pixel.png
 SITE_FAVICON_B64 = 'filenameb64:cGl4ZWwucG5n;datab64:iVBORw0KGgoAAAANSUhEUgAA'\
@@ -16,19 +15,19 @@ SITE_FAVICON_B64 = 'filenameb64:cGl4ZWwucG5n;datab64:iVBORw0KGgoAAAANSUhEUgAA'\
                    'ElFTkSuQmCC'
 
 
-class TestDiazoSnippetsViewlet(ViewletsTestCase):
+class TestDiazoSnippetsViewlet(unittest.TestCase):
     """Validate the diazo snippets viewlet."""
 
     layer = FUNCTIONAL_TESTING
 
-    def afterSetUp(self):
-        registry = getUtility(IRegistry)
-        registry.registerInterface(IPloneThemeSettings)
-        registry.registerInterface(IPloneThemingVocabularies)
+    def setUp(self):
+        """Additional test setup."""
+        self.portal = self.layer['portal']
+        self.request = self.layer['request']
 
     def test_diazo_snippets_viewlet_render(self):
         """Validate that the diazo snippet viewlet renders correctly."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         try:
@@ -38,7 +37,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippets_debug_style(self):
         """Validate that the diazo snippet viewlet applies correct CSS."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertEqual(dsv.debug_style, 'none')
@@ -49,7 +48,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippets_debug_style_set(self):
         """Validate that the diazo snippet viewlet applies correct CSS."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='debug',
@@ -65,7 +64,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_debug(self):
         """Validate the 'debug' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.debug)
@@ -76,7 +75,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_debug_set(self):
         """Validate the 'debug' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='debug',
@@ -92,7 +91,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_plone_version(self):
         """Validate the 'plone_version' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         version = ploneapi.env.plone_version()[:1]
@@ -105,14 +104,14 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_favicon(self):
         """Validate the 'favicon' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         url = '{0}/favicon.ico'.format(self.portal.absolute_url())
         self.assertEqual(dsv.favicon, url)
 
     def test_diazo_snippet_favicon_set(self):
         """Validate the 'favicon' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='site_favicon',
@@ -124,13 +123,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_header_option(self):
         """Validate the 'header_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.header_option, None)
 
     def test_diazo_snippet_header_option_set(self):
         """Validate the 'header_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_header_options',
@@ -146,13 +145,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_footer_option(self):
         """Validate the 'footer_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.footer_option, None)
 
     def test_diazo_snippet_footer_option_set(self):
         """Validate the 'footer_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_footer_options',
@@ -168,13 +167,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_color_option(self):
         """Validate the 'color_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.color_option, None)
 
     def test_diazo_snippet_color_option_set(self):
         """Validate the 'color_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_color_options',
@@ -190,13 +189,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_pattern_option(self):
         """Validate the 'pattern_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.pattern_option, None)
 
     def test_diazo_snippet_pattern_option_set(self):
         """Validate the 'pattern_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_pattern_options',
@@ -212,13 +211,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_layout_option(self):
         """Validate the 'layout_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.layout_option, None)
 
     def test_diazo_snippet_layout_option_set(self):
         """Validate the 'layout_option' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_layout_options',
@@ -234,13 +233,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_slogan(self):
         """Validate the 'slogan' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.slogan, None)
 
     def test_diazo_snippet_slogan_set(self):
         """Validate the 'slogan' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='slogan',
@@ -251,14 +250,14 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_phone_number(self):
         """Validate the 'phone_number' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.phone_number, None)
         self.assertEqual(dsv.phone_number_raw, None)
 
     def test_diazo_snippet_phone_number_set(self):
         """Validate the 'phone_number' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='phone_number',
@@ -270,13 +269,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_email(self):
         """Validate the 'email' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.email, None)
 
     def test_diazo_snippet_email_set(self):
         """Validate the 'email' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='email',
@@ -287,7 +286,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_searchbox(self):
         """Validate the 'hide_searchbox' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.hide_searchbox)
@@ -298,7 +297,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_searchbox_set(self):
         """Validate the 'hide_searchbox' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='hide_searchbox',
@@ -314,13 +313,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_footer_text(self):
         """Validate the 'footer_text' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.footer_text, None)
 
     def test_diazo_snippet_footer_text_set(self):
         """Validate the 'footer_text' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='footer_text',
@@ -339,7 +338,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_footer(self):
         """Validate the 'hide_footer' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.hide_footer)
@@ -350,7 +349,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_footer_set(self):
         """Validate the 'hide_footer' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='hide_footer',
@@ -366,13 +365,13 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_colophon_text(self):
         """Validate the 'colophon_text' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         self.assertEqual(dsv.colophon_text, None)
 
     def test_diazo_snippet_colophon_text_set(self):
         """Validate the 'colophon_text' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='colophon_text',
@@ -395,7 +394,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_colophon(self):
         """Validate the 'hide_colophon' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.hide_colophon)
@@ -406,7 +405,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_hide_colophon_set(self):
         """Validate the 'hide_colophon' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='hide_colophon',
@@ -422,7 +421,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_themingplugins_available(self):
         """Validate the 'themingplugins_available' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.themingplugins_available)
@@ -438,7 +437,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_themefragments_available(self):
         """Validate the 'themefragments_available' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.themefragments_available)
@@ -454,7 +453,7 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
 
     def test_diazo_snippet_rapido_available(self):
         """Validate the 'rapido_available' attribute."""
-        dsv = DiazoSnippetViewlet(self.portal, self.app.REQUEST, None)
+        dsv = DiazoSnippetViewlet(self.portal, self.request, None)
         dsv.update()
         rendered = dsv.render()
         self.assertFalse(dsv.rapido_available)
