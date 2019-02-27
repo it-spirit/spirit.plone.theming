@@ -10,7 +10,6 @@ from tzlocal import get_localzone
 
 import pkg_resources
 
-
 TZNAME = get_localzone().zone
 DUMMY_TEXT_SHORT = """Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam

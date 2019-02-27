@@ -8,7 +8,6 @@ from spirit.plone.theming import testing
 import os
 import robotsuite
 
-
 try:
     import unittest2 as unittest
 except ImportError:
@@ -26,15 +25,17 @@ def test_suite():
     current_dir = os.path.abspath(os.path.dirname(__file__))
     robot_dir = os.path.join(current_dir, 'robot')
     robot_tests = [
-        os.path.join('robot', doc)
-        for doc in os.listdir(robot_dir)
+        os.path.join('robot',
+                     doc) for doc in os.listdir(robot_dir)
         if doc.startswith('test') and doc.endswith('.robot')
     ]
     for test in robot_tests:
-        suite.addTests([
-            layered(
-                robotsuite.RobotTestSuite(test),
-                layer=testing.ROBOT_TESTING,
-            ),
-        ])
+        suite.addTests(
+            [
+                layered(
+                    robotsuite.RobotTestSuite(test),
+                    layer=testing.ROBOT_TESTING,
+                ),
+            ],
+        )
     return suite

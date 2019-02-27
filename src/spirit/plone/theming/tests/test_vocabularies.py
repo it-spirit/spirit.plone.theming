@@ -7,7 +7,6 @@ from spirit.plone.theming.testing import INTEGRATION_TESTING
 from zope.component import queryUtility
 from zope.schema.interfaces import IVocabularyFactory
 
-
 try:
     import unittest2 as unittest
 except ImportError:
@@ -32,7 +31,8 @@ class VocabulariesTestCase(unittest.TestCase):
 
         ploneapi.portal.set_registry_record(
             name='available_header_options',
-            value=set(['header-default', 'header-v1']),
+            value=set(['header-default',
+                       'header-v1']),
             interface=IPloneThemingVocabularies,
         )
         items = vocabulary(self.portal)
@@ -50,7 +50,8 @@ class VocabulariesTestCase(unittest.TestCase):
 
         ploneapi.portal.set_registry_record(
             name='available_footer_options',
-            value=set(['footer-default', 'footer-v1']),
+            value=set(['footer-default',
+                       'footer-v1']),
             interface=IPloneThemingVocabularies,
         )
         items = vocabulary(self.portal)
@@ -68,7 +69,9 @@ class VocabulariesTestCase(unittest.TestCase):
 
         ploneapi.portal.set_registry_record(
             name='available_color_options',
-            value=set(['blue', 'green', 'red']),
+            value=set(['blue',
+                       'green',
+                       'red']),
             interface=IPloneThemingVocabularies,
         )
         items = vocabulary(self.portal)
@@ -87,7 +90,9 @@ class VocabulariesTestCase(unittest.TestCase):
 
         ploneapi.portal.set_registry_record(
             name='available_pattern_options',
-            value=set(['pat1', 'pat2', 'pat3']),
+            value=set(['pat1',
+                       'pat2',
+                       'pat3']),
             interface=IPloneThemingVocabularies,
         )
         items = vocabulary(self.portal)
@@ -106,7 +111,8 @@ class VocabulariesTestCase(unittest.TestCase):
 
         ploneapi.portal.set_registry_record(
             name='available_layout_options',
-            value=set(['boxed', 'wide']),
+            value=set(['boxed',
+                       'wide']),
             interface=IPloneThemingVocabularies,
         )
         items = vocabulary(self.portal)

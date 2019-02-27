@@ -5,7 +5,6 @@ This view is for Plone 4 only, since Plone 5 introduced the logo upload
 in the site settings.
 """
 
-
 from plone.formwidget.namedfile.converter import b64decode_file
 from plone.namedfile.browser import Download
 from plone.namedfile.file import NamedImage

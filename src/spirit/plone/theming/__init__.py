@@ -7,7 +7,6 @@ from zope.i18nmessageid import MessageFactory
 
 import logging
 
-
 PLONE_4 = '4' <= ploneapi.env.plone_version() < '5'
 PLONE_5 = '5' <= ploneapi.env.plone_version() < '6'
 

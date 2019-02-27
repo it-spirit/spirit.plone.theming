@@ -4,7 +4,6 @@
 from spirit.plone.theming import utils
 from spirit.plone.theming.testing import INTEGRATION_TESTING
 
-
 try:
     import unittest2 as unittest
 except ImportError:

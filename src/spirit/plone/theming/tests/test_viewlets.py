@@ -9,7 +9,6 @@ from spirit.plone.theming.interfaces import IPloneThemeSettings
 from spirit.plone.theming.interfaces import IPloneThemingVocabularies
 from zope.component import getUtility
 
-
 # Red pixel with filename pixel.png
 SITE_FAVICON_B64 = 'filenameb64:cGl4ZWwucG5n;datab64:iVBORw0KGgoAAAANSUhEUgAA'\
                    'AAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAA'\
@@ -180,7 +179,8 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_color_options',
-            value=set(['blue', 'green']),
+            value=set(['blue',
+                       'green']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
@@ -202,7 +202,9 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_pattern_options',
-            value=set(['pat1', 'pat2', 'pat3']),
+            value=set(['pat1',
+                       'pat2',
+                       'pat3']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
@@ -224,7 +226,8 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='available_layout_options',
-            value=set(['boxed', 'wide']),
+            value=set(['boxed',
+                       'wide']),
             interface=IPloneThemingVocabularies,
         )
         ploneapi.portal.set_registry_record(
@@ -378,10 +381,12 @@ class TestDiazoSnippetsViewlet(ViewletsTestCase):
         dsv.update()
         ploneapi.portal.set_registry_record(
             name='colophon_text',
-            value=u''.join([
-                u'<p>Powered by Plone, Python & <a href="{portal_url}">'
-                u'Your Company Name</a></p>',
-            ]),
+            value=u''.join(
+                [
+                    u'<p>Powered by Plone, Python & <a href="{portal_url}">'
+                    u'Your Company Name</a></p>',
+                ],
+            ),
             interface=IPloneThemeSettings,
         )
         output = dsv.colophon_text

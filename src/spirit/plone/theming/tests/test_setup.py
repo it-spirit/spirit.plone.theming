@@ -6,7 +6,6 @@ from plone.browserlayer.utils import registered_layers
 from spirit.plone.theming.config import PROJECT_NAME
 from spirit.plone.theming.testing import INTEGRATION_TESTING
 
-
 try:
     import unittest2 as unittest
 except ImportError:
