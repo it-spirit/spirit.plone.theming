@@ -10,11 +10,23 @@ from spirit.plone.theming.interfaces import IPloneThemeSettings
 from spirit.plone.theming.interfaces import IPloneThemeSettingsEditForm
 from z3c.form import field
 from zope.component import getUtility
+from zope.interface import alsoProvides
 from zope.interface import implementer
+
+try:
+    from plone.protect.interfaces import IDisableCSRFProtection
+except ImportError:
+    # Plone 4
+    IDisableCSRFProtection = None
 
 
 class SelfHealingRegistryEditForm(controlpanel.RegistryEditForm):
     """Registers the schema if an error occured."""
+
+    def __init__(self, context, request):
+        super(SelfHealingRegistryEditForm, self).__init__(context, request)
+        if IDisableCSRFProtection is not None:
+            alsoProvides(request, IDisableCSRFProtection)
 
     def getContent(self):
         registry = getUtility(IRegistry)
