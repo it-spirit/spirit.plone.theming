@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.9 (unreleased)
+0.9 (2019-03-07)
 ----------------
 
 - Add Plone 5.2.x compatibility (Python 2.7 only).
