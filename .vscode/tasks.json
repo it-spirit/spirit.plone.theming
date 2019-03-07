@@ -4,9 +4,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Plone: code-analysis",
+      "label": "Plone: release",
       "type": "shell",
-      "command": "bin/code-analysis",
+      "command": "bin/fullrelease",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -25,6 +25,12 @@
       "label": "Plone: all tests",
       "type": "shell",
       "command": "bin/test --all",
+      "group": "test"
+    },
+    {
+      "label": "Plone: code-analysis",
+      "type": "shell",
+      "command": "bin/code-analysis",
       "group": "test"
     }
   ]
