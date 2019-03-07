@@ -15,7 +15,7 @@ Changelog
   [tmassman]
 - Drop Plone 4.2.x compatibility.
   [tmassman]
-- Disable CSRF on controlpanel form due tu plone.formwidget.namedfile temp storage.
+- Disable CSRF on controlpanel form due to plone.formwidget.namedfile temp storage.
   [tmassman]
 
 
