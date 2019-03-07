@@ -35,13 +35,13 @@ class IPloneThemeSettings(model.Schema):
     )
 
     if PLONE_4:
-        site_logo = schema.ASCII(
+        site_logo = schema.Bytes(
             description=_(u'This shows a custom logo on your site.'),
             required=False,
             title=_(u'Site Logo'),
         )
 
-    site_favicon = schema.ASCII(
+    site_favicon = schema.Bytes(
         description=_(u'This shows a custom favicon on your site.'),
         required=False,
         title=_(u'Site Favicon'),
