@@ -5,7 +5,11 @@ Changelog
 0.9 (unreleased)
 ----------------
 
+- Add Plone 5.2.x compatibility (Python 2.7 only).
+  [tmassman]
 - Drop Plone 4.2.x compatibility.
+  [tmassman]
+- Disable CSRF on controlpanel form due tu plone.formwidget.namedfile temp storage.
   [tmassman]
 
 
