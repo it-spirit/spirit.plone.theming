@@ -37,9 +37,9 @@ Show how to activate the add-on
     ...  addons-enabled
 
     Highlight  addons-spirit-plone-theming
-    Capture and crop page screenshot
-    ...  setup_select_add_on_installable.png
+    Capture Element Screenshot
     ...  id=addons-enabled
+    ...  setup_select_add_on_installable.png
 
 
 *** Keywords ***
