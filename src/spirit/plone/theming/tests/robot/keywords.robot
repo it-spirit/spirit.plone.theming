@@ -13,7 +13,7 @@ ${FIXTURE}  spirit.plone.theming.testing.ACCEPTANCE_TESTING
 @{DIMENSIONS}  1024  800
 ${RESOURCE_DIR}  ${CURDIR}
 
-${BROWSER}  chrome
+# ${BROWSER}  chrome
 
 ${FOLDER_ID}  a-folder
 ${DOCUMENT_ID}  a-document
