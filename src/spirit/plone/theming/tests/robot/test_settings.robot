@@ -13,84 +13,84 @@ Show how to change the settings
     and the theming controlpanel
 
     Page should contain element  id=form
-    Capture and crop page screenshot
-    ...  settings.png
+    Capture Element Screenshot
     ...  id=form
+    ...  settings.png
 
     Page should contain element  id=formfield-form-widgets-debug
-    Capture and crop page screenshot
-    ...  settings-debug.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-debug
+    ...  settings-debug.png
 
     Page should contain element  id=formfield-form-widgets-site_favicon
-    Capture and crop page screenshot
-    ...  settings-site_favicon.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-site_favicon
+    ...  settings-site_favicon.png
 
     Page should contain element  id=formfield-form-widgets-header_option
-    Capture and crop page screenshot
-    ...  settings-header_option.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-header_option
+    ...  settings-header_option.png
 
     Page should contain element  id=formfield-form-widgets-footer_option
-    Capture and crop page screenshot
-    ...  settings-footer_option.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-footer_option
+    ...  settings-footer_option.png
 
     Page should contain element  id=formfield-form-widgets-color_option
-    Capture and crop page screenshot
-    ...  settings-color_option.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-color_option
+    ...  settings-color_option.png
 
     Page should contain element  id=formfield-form-widgets-pattern_option
-    Capture and crop page screenshot
-    ...  settings-pattern_option.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-pattern_option
+    ...  settings-pattern_option.png
 
     Page should contain element  id=formfield-form-widgets-layout_option
-    Capture and crop page screenshot
-    ...  settings-layout_option.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-layout_option
+    ...  settings-layout_option.png
 
     Page should contain element  id=formfield-form-widgets-slogan
-    Capture and crop page screenshot
-    ...  settings-slogan.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-slogan
+    ...  settings-slogan.png
 
     Page should contain element  id=formfield-form-widgets-phone_number
-    Capture and crop page screenshot
-    ...  settings-phone_number.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-phone_number
+    ...  settings-phone_number.png
 
     Page should contain element  id=formfield-form-widgets-email
-    Capture and crop page screenshot
-    ...  settings-email.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-email
+    ...  settings-email.png
 
     Page should contain element  id=formfield-form-widgets-hide_searchbox
-    Capture and crop page screenshot
-    ...  settings-hide_searchbox.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-hide_searchbox
+    ...  settings-hide_searchbox.png
 
     Page should contain element  id=formfield-form-widgets-footer_text
-    Capture and crop page screenshot
-    ...  settings-footer_text.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-footer_text
+    ...  settings-footer_text.png
 
     Page should contain element  id=formfield-form-widgets-hide_footer
-    Capture and crop page screenshot
-    ...  settings-hide_footer.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-hide_footer
+    ...  settings-hide_footer.png
 
     Page should contain element  id=formfield-form-widgets-colophon_text
-    Capture and crop page screenshot
-    ...  settings-colophon_text.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-colophon_text
+    ...  settings-colophon_text.png
 
     Page should contain element  id=formfield-form-widgets-hide_colophon
-    Capture and crop page screenshot
-    ...  settings-hide_colophon.png
+    Capture Element Screenshot
     ...  id=formfield-form-widgets-hide_colophon
+    ...  settings-hide_colophon.png
 
 
 *** Keywords ***

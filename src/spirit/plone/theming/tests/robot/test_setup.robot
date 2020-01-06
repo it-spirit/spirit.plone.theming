@@ -21,9 +21,9 @@ Show how to activate the add-on
     ...  addons-enabled
 
     Highlight  addons-spirit-plone-theming
-    Capture and crop page screenshot
-    ...  setup_select_add_on.png
+    Capture Element Screenshot
     ...  id=addons-enabled
+    ...  setup_select_add_on.png
 
     Click button  xpath=//*[@value='spirit.plone.theming']/ancestor::form//input[@type='submit']
 
